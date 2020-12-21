@@ -1,0 +1,46 @@
+@import "montserrat.scss";
+@import "colors.scss";
+
+@mixin normal-font-style {
+  font-family: "Montserrat-Regular", sans-serif;
+  color: $color-dark-75;
+}
+
+@mixin bold-font-style {
+  font-family: "Montserrat-Bold", sans-serif;
+  color: $color-dark-100;
+}
+
+// @mixin base-font-style {
+//   vertical-align: top;
+//   text-align: left;
+//   font-weight: normal;
+// }
+
+@mixin h1-font-style {
+//   @include base-font-style;
+  @include bold-font-style;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@mixin h2-font-style {
+//   @include base-font-style;
+  @include bold-font-style;
+  font-size: 19px;
+  line-height: 23px;
+}
+
+@mixin h3-font-style {
+//   @include base-font-style;
+  @include bold-font-style;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+@mixin body-font-style {
+//   @include base-font-style;
+  @include normal-font-style;
+  font-size: 14px;
+  line-height: 24px;
+}

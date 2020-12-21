@@ -1,0 +1,21 @@
+@import '@styles/zero-style.scss';
+@import '@styles/text.scss';
+@import '@styles/colors.scss';
+
+@import '@components/logo/logo.scss';
+@import '@components/logo/_grayscale/logo_grayscale.scss';
+@import '@components/logo/_size_m/logo_size_m.scss';
+
+
+body {
+    background-color: $color-background;
+    // width: 1440px;
+    // height: 1350px;
+    // display: block;
+}
+
+.page__logo {
+  position: absolute;
+  margin-left: 30px;
+  margin-top:  30px;
+}

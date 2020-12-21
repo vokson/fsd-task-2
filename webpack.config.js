@@ -82,10 +82,18 @@ const jsLoaders = () => {
 const plugins = () => {
   const base = [
     new HTMLWebpackPlugin({
-      template: './main.html',
+      template: './pages/color_type/color_type.pug',
+      filename: './color_type.html',
       minify: {
-        collapseWhitespace: isProd
-      }
+            collapseWhitespace: isProd
+          }
+    }),
+    new HTMLWebpackPlugin({
+      template: './pages/header_footer/header_footer.pug',
+      filename: './index.html',
+      minify: {
+            collapseWhitespace: isProd
+          }
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
@@ -110,7 +118,9 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['@babel/polyfill', './main.js']
+    // main: ['@babel/polyfill', './main.js']
+    color_type: ['@babel/polyfill', './pages/color_type/color_type.js', './pages/color_type/color_type.scss'],
+    header_footer: ['@babel/polyfill', './pages/header_footer/header_footer.js', './pages/header_footer/header_footer.scss']
   },
   output: {
     filename: filename('js'),
@@ -119,7 +129,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json', '.png'],
     alias: {
-      '@models': path.resolve(__dirname, 'src/models'),
+      '@pages': path.resolve(__dirname, 'src/pages'),
+      '@styles': path.resolve(__dirname, 'src/styles'),
+      '@components': path.resolve(__dirname, 'src/assets/components'),
+      '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
       '@': path.resolve(__dirname, 'src'),
     }
   },
@@ -161,6 +174,16 @@ module.exports = {
         use: ['csv-loader']
       },
       {
+        test: /\.pug$/,
+        exclude: /node_modules/,
+        loader: {
+          loader: 'pug-loader',
+          options: {
+            pretty: true
+          }
+        }
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: jsLoaders()
@@ -173,14 +196,14 @@ module.exports = {
           options: babelOptions('@babel/preset-typescript')
         }
       },
-      {
-        test: /\.jsx$/,
-        exclude: /node_modules/,
-        loader: {
-          loader: 'babel-loader',
-          options: babelOptions('@babel/preset-react')
-        }
-      }
+      // {
+      //   test: /\.jsx$/,
+      //   exclude: /node_modules/,
+      //   loader: {
+      //     loader: 'babel-loader',
+      //     options: babelOptions('@babel/preset-react')
+      //   }
+      // }
     ]
   }
 }

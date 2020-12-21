@@ -1,0 +1,129 @@
+/* @import '~normalize.css'; */
+@import '@styles/zero-style.scss';
+@import '@styles/text.scss';
+@import '@styles/colors.scss';
+
+@import '@components/logo/logo.scss';
+@import '@components/logo/_grayscale/logo_grayscale.scss';
+@import '@components/logo/_size_m/logo_size_m.scss';
+
+.logo-container {
+  position: absolute;
+  margin-left: 30px;
+  margin-top:  30px;
+}
+
+.rect-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 70px 180px;
+  row-gap: 20px;
+  column-gap: 40px;
+  margin: 145px 150px;
+
+  .rect {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+  }
+
+  .rect-0 {
+    background: $color-dark-100;
+  }
+
+  .rect-1 {
+    background: $color-dark-75;
+  }
+
+  .rect-2 {
+    background: $color-dark-50;
+  }
+
+  .rect-3 {
+    background: $color-dark-25;
+  }
+
+  .rect-4 {
+    background: $color-dark-5;
+  }
+
+  .rect-5 {
+    background: $color-purple;
+  }
+
+  .rect-6 {
+    background: $color-green;
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 25px;
+    display: block;
+
+    &.font-name {
+      @include bold-font-style;
+      padding-top: 9px;
+    }
+
+    &.font-code {
+      @include normal-font-style;
+      padding-top: 3px;
+      color: $color-dark-100;
+    }
+  }
+}
+
+.font-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 43px 370px;
+  column-gap: 30px;
+  margin: 145px 840px;
+
+  .label {
+    text-align: right;
+    @include normal-font-style;
+    color: $color-dark-25;
+  }
+
+  .label-h1 {
+    font-size: 24px;
+  }
+
+  .label-h2 {
+    font-size: 19px;
+  }
+
+  .label-h3 {
+    font-size: 12px;
+  }
+
+  .label-body {
+    font-size: 14px;
+  }
+
+  .description {
+    vertical-align: top;
+  }
+
+  .description-h1 {
+    @include h1-font-style;
+    height: 110px;
+  }
+
+  .description-h2 {
+    @include h2-font-style;
+    height: 98px;
+  }
+
+  .description-h3 {
+    @include h3-font-style;
+    height: 65px;
+  }
+
+  .description-body {
+    @include body-font-style;
+    width: 310px;
+    margin-top: -3px;
+  }
+}

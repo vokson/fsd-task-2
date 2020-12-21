@@ -1,0 +1,42 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset="utf-8")
+    body
+        div(class='logo logo_grayscale logo_size_m logo-container')
+        div(class='rect-container')
+            -
+                var rect_list = [
+                    ['Dark Shade 100%', '#1F2041'],
+                    ['Dark Shade 75%', '#1F2041'],
+                    ['Dark Shade 50%', '#1F2041'],
+                    ['Dark Shade 25%', '#1F2041'],
+                    ['Dark Shade 5%', '#1F2041'],
+                    ['Purple', '#BC9CFF'],
+                    ['Green', '#6FCF97'],
+                ]
+            
+            each val, index in rect_list
+                div(class='rect rect-'+index)
+                div
+                    p(class='font-name')= val[0]
+                    p(class='font-code')= val[1]
+        
+
+        div(class='font-container')
+            -
+                var font_list = [
+                    ['h1', 'This one is the sub-section or widget title'],
+                    ['h2', 'Next one is the item title inside widgets'],
+                    ['h3', 'THIS IS A LABEL OR CTA TEXT'],
+                    ['body', 'This is the body text which is used for most of the design, like paragraphs, lists, etc.']
+                ]
+
+            each val in font_list
+                -
+                    var suffix = val[0]
+                    var suffixCapitalized = suffix[0].toUpperCase() + suffix.slice(1)
+
+                div(class='label label-' + suffix)= suffixCapitalized
+                div(class='description description-' + suffix)
+                    p= val[1]
