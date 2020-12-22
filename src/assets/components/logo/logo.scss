@@ -1,3 +1,8 @@
+@import '@components/logo/_grayscale/logo_grayscale.scss';
+@import '@components/logo/_colored/logo_colored.scss';
+@import '@components/logo/_size_m/logo_size_m.scss';
+@import '@components/logo/_size_s/logo_size_s.scss';
+
 .logo {
     background-repeat: no-repeat;
     background-size: 100% auto;

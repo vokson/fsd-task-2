@@ -1,0 +1,19 @@
+mixin text-field(parameters)
+    div(class='text-field')&attributes(attributes)
+        if parameters.label
+            label(class='text-field__label')= parameters.label
+
+        -
+            let inputAttributes = {
+                'type': 'text',
+                'class': 'text-field__input',
+                'placeholder': parameters.placeholder,
+                'value': parameters.value
+            }
+
+            if (parameters.date_mask ) {
+                 inputAttributes.class += ' text-field__input_date-mask';
+            }
+            //- inputAttributes.class = parameters.date_mask ? 'text-field__input_date-mask' : 'text-field__input';
+
+        input&attributes(inputAttributes)

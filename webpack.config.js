@@ -88,8 +88,16 @@ const plugins = () => {
             collapseWhitespace: isProd
           }
     }),
+    // new HTMLWebpackPlugin({
+    //   template: './pages/header_footer/header_footer.pug',
+    //   filename: './index.html',
+    //   minify: {
+    //         collapseWhitespace: isProd
+    //       }
+    // }),
+
     new HTMLWebpackPlugin({
-      template: './pages/header_footer/header_footer.pug',
+      template: './pages/form_elements/form_elements.pug',
       filename: './index.html',
       minify: {
             collapseWhitespace: isProd
@@ -120,7 +128,8 @@ module.exports = {
   entry: {
     // main: ['@babel/polyfill', './main.js']
     color_type: ['@babel/polyfill', './pages/color_type/color_type.js', './pages/color_type/color_type.scss'],
-    header_footer: ['@babel/polyfill', './pages/header_footer/header_footer.js', './pages/header_footer/header_footer.scss']
+    // header_footer: ['@babel/polyfill', './pages/header_footer/header_footer.js', './pages/header_footer/header_footer.scss'],
+    form_elements: ['@babel/polyfill', './pages/form_elements/form_elements.js', './pages/form_elements/form_elements.scss']
   },
   output: {
     filename: filename('js'),

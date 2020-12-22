@@ -1,0 +1,22 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=1440, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0')
+    body
+        include ../../assets/components/text-field/text-field.pug
+
+        div(class='logo logo_grayscale logo_size_m page__logo')
+        div(class='page')
+            div(class='page__container container')
+                div(class='container__block-1 block-1')
+                    +text-field({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-1__text-field')
+                    +text-field({'label': 'TEXT FIELD', 'value' : 'This is pretty awesome'})(class='block-1__focused-text-field')
+                    +text-field({'label': 'MASKED TEXT FIELD', 'date_mask' : true})(class='block-1__masked-text-field')
+
+                div(class='container__block-2')
+                div(class='container__block-3')
+                div(class='container__block-4')
+                div(class='container__block-5')
+                div(class='container__block-6')
+                div(class='container__block-7')
