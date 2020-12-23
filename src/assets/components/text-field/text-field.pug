@@ -12,8 +12,9 @@ mixin text-field(parameters)
             }
 
             if (parameters.date_mask ) {
-                 inputAttributes.class += ' text-field__input_date-mask';
+                inputAttributes.class += ' text-field__input_date-mask';
+                inputAttributes.placeholder = 'ДД.ММ.ГГГГ';
+                inputAttributes.pattern = '^[0-3]{1}\\d{1}\\.[0-1]{1}\\d{1}\\.20\\d{2}$'
             }
-            //- inputAttributes.class = parameters.date_mask ? 'text-field__input_date-mask' : 'text-field__input';
 
         input&attributes(inputAttributes)
