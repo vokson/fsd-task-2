@@ -1,0 +1,14 @@
+mixin logo(parameters)
+    -
+        let classString = 'logo'
+        if (parameters.size) {
+            classString += ' logo_size_' + parameters.size;
+        }
+
+        if (parameters.colored) {
+            classString += ' logo_colored';
+        } else {
+            classString += ' logo_grayscale';
+        }
+
+    div(class=classString)&attributes(attributes)

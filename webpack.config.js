@@ -126,10 +126,10 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    // main: ['@babel/polyfill', './main.js']
     color_type: ['./pages/color_type/color_type.scss'],
     // header_footer: ['@babel/polyfill', './pages/header_footer/header_footer.js', './pages/header_footer/header_footer.scss'],
     form_elements: ['@babel/polyfill', './pages/form_elements/form_elements.js', './pages/form_elements/form_elements.scss']
+    // form_elements: ['@babel/polyfill', './pages/form_elements/form_elements.js']
   },
   output: {
     filename: filename('js'),

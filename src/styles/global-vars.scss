@@ -1,0 +1,63 @@
+$color-dark-100: rgba(31, 32, 65, 1);
+$color-dark-75: rgba(31, 32, 65, 0.75);
+$color-dark-50: rgba(31, 32, 65, 0.5);
+$color-dark-25: rgba(31, 32, 65, 0.25);
+$color-dark-5: rgba(31, 32, 65, 0.05);
+$color-purple:#bc9cff;
+$color-green:  #6fcf97;
+$color-background:#F4F4F6;
+
+@font-face {
+	font-family: 'Montserrat-Regular';
+	src: local('☺'), url('~@fonts/Montserrat-Regular.woff') format('woff'), url('~@fonts/Montserrat-Regular.ttf') format('truetype'), url('~@fonts/Montserrat-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: local('☺'), url('~@fonts/Montserrat-Bold.woff') format('woff'), url('~@fonts/Montserrat-Bold.ttf') format('truetype'), url('~@fonts/Montserrat-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@mixin normal-font-style {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: normal;
+}
+
+@mixin bold-font-style {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: normal;
+}
+
+
+@mixin h1-font-style {
+  @include bold-font-style;
+  font-size: 24px;
+  line-height: 29px;
+  color: $color-dark-100;
+}
+
+@mixin h2-font-style {
+  @include bold-font-style;
+  font-size: 19px;
+  line-height: 23px;
+  color: $color-dark-100;
+}
+
+@mixin h3-font-style {
+  @include bold-font-style;
+  font-size: 12px;
+  line-height: 15px;
+  color: $color-dark-100;
+  
+}
+
+@mixin body-font-style {
+  @include normal-font-style;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color-dark-75;
+}
