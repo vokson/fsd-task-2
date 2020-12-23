@@ -1,7 +1,8 @@
 mixin text-field(parameters)
     div(class='text-field')&attributes(attributes)
         if parameters.label
-            label(class='text-field__label')= parameters.label
+            include ../label/label.pug
+            +label({'label': parameters.label})(class='text-field__label')
 
         -
             let inputAttributes = {
