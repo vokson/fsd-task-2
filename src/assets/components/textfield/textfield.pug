@@ -6,21 +6,22 @@
 //- date-mask: input with date mask
 //- right-border-free: input without right border
 //- without-left-bottom-radius: input without right border
-
-mixin text-field(parameters)
-    div(class='text-field')&attributes(attributes)
+//- disabled
+mixin textfield(parameters)
+    div(class='textfield')&attributes(attributes)
         if parameters.label
-            include ./__label/text-field__label.pug
-            +text-field__label({'label': parameters.label})
+            include ./__label/textfield__label.pug
+            +textfield__label({'label': parameters.label})
 
         -
             let inputParams = {
                 'placeholder': parameters.placeholder,
                 'value': parameters.value,
+                'disabled': parameters.disabled,
                 'date-mask': parameters['date-mask'],
                 'right-border-free': parameters['right-border-free'],
                 'without-left-bottom-radius': parameters['without-left-bottom-radius'],
             }
 
-        include ./__input/text-field__input.pug
-        +text-field__input(inputParams)
+        include ./__input/textfield__input.pug
+        +textfield__input(inputParams)

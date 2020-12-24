@@ -1,3 +1,6 @@
 .dropdown__icon_arrow {
-    color: $color-dark-25;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #8ba4f9;
 }

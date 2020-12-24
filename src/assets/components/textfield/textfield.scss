@@ -1,0 +1,8 @@
+.textfield {
+  width: 100%;
+  min-width: 106px;
+  min-height: 44px;
+}
+
+@import './__input/textfield__input.scss';
+@import './__label/textfield__label.scss';

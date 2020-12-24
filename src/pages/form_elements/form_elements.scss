@@ -2,7 +2,7 @@
 @import '@styles/global-vars.scss';
 
 @import '@components/logo/logo.scss';
-@import '@components/text-field/text-field.scss';
+@import '@components/textfield/textfield.scss';
 @import '@components/dropdown/dropdown.scss';
 
 .page__logo {
@@ -23,12 +23,12 @@
 
 .block-1 {
   width: 100%;
-  .block-1__focused-text-field,
+  .block-1__focused-textfield,
   .block-1__guest-dropdown {
     margin-top: 20px;
   }
 
-  .block-1__masked-text-field {
+  .block-1__masked-textfield {
     margin-top: 22.56px;
   }
 
@@ -53,6 +53,11 @@
 
   .block-1__filter-date-dropdown {
     width: 266px;
-    margin-top: 40px;
+    margin-top: 41px;
+  }
+
+  .block-1__subscription-textfield {
+    width: 267px;
+    margin-top: 41px;
   }
 }
