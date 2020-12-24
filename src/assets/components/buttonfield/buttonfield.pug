@@ -5,11 +5,11 @@
 //- icon_(expand|arrow)
 //- bottom_flat
 //- disabled
-mixin dropdown(parameters)
-    div(class='dropdown')&attributes(attributes)
-        include ./__input/dropdown__input.pug
-        include ./__label/dropdown__label.pug
-        include ./__button/dropdown__button.pug
+mixin buttonfield(parameters)
+    div(class='buttonfield')&attributes(attributes)
+        include ./__input/buttonfield__input.pug
+        include ./__label/buttonfield__label.pug
+        include ./__button/buttonfield__button.pug
 
         -
             let inputParams = {
@@ -27,6 +27,6 @@ mixin dropdown(parameters)
                 buttonParams['without-right-bottom-radius'] = true
             }
 
-        +dropdown__label({'label': parameters.label})
-        +dropdown__input(inputParams)
-        +dropdown__button(buttonParams)
+        +buttonfield__label({'label': parameters.label})
+        +buttonfield__input(inputParams)
+        +buttonfield__button(buttonParams)

@@ -7,7 +7,7 @@ html(lang='ru')
     body
         include ../../assets/components/logo/logo.pug
         include ../../assets/components/textfield/textfield.pug
-        include ../../assets/components/dropdown/dropdown.pug
+        include ../../assets/components/buttonfield/buttonfield.pug
 
         +logo({'size': 'm'})(class='page__logo')
         
@@ -16,15 +16,15 @@ html(lang='ru')
                 div(class='container__block-1 block-1')
                     +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-1__textfield')
                     +textfield({'label': 'TEXT FIELD', 'value' : 'This is pretty awesome'})(class='block-1__focused-textfield')
-                    +dropdown({'label': 'DROPDOWN', 'value' : 'Сколько гостей', 'icon': 'expand', 'disabled': true})(class='block-1__guest-dropdown')
+                    +buttonfield({'label': 'DROPDOWN', 'value' : 'Сколько гостей', 'icon': 'expand', 'disabled': true})(class='block-1__guest-buttonfield')
                     +textfield({'label': 'MASKED TEXT FIELD', 'date-mask' : true})(class='block-1__masked-textfield')
 
-                    div(class='container__dropdown-row')
-                        +dropdown({'label': 'DATE DROPDOWN', 'value' : 'ДД.ММ.ГГГГ', 'icon': 'expand', 'disabled': true})(class='block-1__single-date-dropdown')
-                        +dropdown({'label': 'DATE DROPDOWN', 'value' : '19.08.2019', 'icon': 'expand', 'disabled': true})(class='block-1__chosen-single-date-dropdown')
+                    div(class='container__buttonfield-row')
+                        +buttonfield({'label': 'DATE DROPDOWN', 'value' : 'ДД.ММ.ГГГГ', 'icon': 'expand', 'disabled': true})(class='block-1__single-date-buttonfield')
+                        +buttonfield({'label': 'DATE DROPDOWN', 'value' : '19.08.2019', 'icon': 'expand', 'disabled': true})(class='block-1__chosen-single-date-buttonfield')
 
-                    +dropdown({'label': 'FILTER DATE DROPDOWN', 'value' : '19 авг - 23 авг', 'icon': 'expand', 'disabled': true})(class='block-1__filter-date-dropdown')
-                    +dropdown({'label': 'SUBSCRIPTION TEXT FIELD', 'placeholder' : 'Email', 'icon': 'arrow'})(class='block-1__subscription-textfield')
+                    +buttonfield({'label': 'FILTER DATE DROPDOWN', 'value' : '19 авг - 23 авг', 'icon': 'expand', 'disabled': true})(class='block-1__filter-date-buttonfield')
+                    +buttonfield({'label': 'SUBSCRIPTION TEXT FIELD', 'placeholder' : 'Email', 'icon': 'arrow'})(class='block-1__subscription-textfield')
 
                 div(class='container__block-2')
                 div(class='container__block-3')

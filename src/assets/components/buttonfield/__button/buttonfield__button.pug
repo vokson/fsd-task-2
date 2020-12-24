@@ -1,0 +1,13 @@
+//- Modificators:
+//- without-right-bottom-radius
+//- icon_(expand|arrow)
+mixin buttonfield__button(parameters)
+    -
+        let cls = 'buttonfield__button'
+        if (parameters['without-right-bottom-radius']) {
+            cls += ' buttonfield__button_without-right-bottom-radius'
+        }
+
+    button(class=cls)
+        include ../__icon/buttonfield__icon.pug
+        +buttonfield__icon({'icon': parameters.icon})

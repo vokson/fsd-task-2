@@ -3,7 +3,7 @@
 
 @import '@components/logo/logo.scss';
 @import '@components/textfield/textfield.scss';
-@import '@components/dropdown/dropdown.scss';
+@import '@components/buttonfield/buttonfield.scss';
 
 .page__logo {
   position: absolute;
@@ -24,7 +24,7 @@
 .block-1 {
   width: 100%;
   .block-1__focused-textfield,
-  .block-1__guest-dropdown {
+  .block-1__guest-buttonfield {
     margin-top: 20px;
   }
 
@@ -32,26 +32,26 @@
     margin-top: 22.56px;
   }
 
-  .container__dropdown-row {
+  .container__buttonfield-row {
     margin-top: 40px;
     display: flex;
 
-    .block-1__single-date-dropdown,
-    .block-1__chosen-single-date-dropdown {
+    .block-1__single-date-buttonfield,
+    .block-1__chosen-single-date-buttonfield {
       width: 150px;
       flex-grow: 0;
     }
 
-    .block-1__single-date-dropdown {
+    .block-1__single-date-buttonfield {
       margin-right: auto;
     }
 
-    .block-1__chosen-single-date-dropdown {
+    .block-1__chosen-single-date-buttonfield {
       margin-left: auto;
     }
   }
 
-  .block-1__filter-date-dropdown {
+  .block-1__filter-date-buttonfield {
     width: 266px;
     margin-top: 41px;
   }
