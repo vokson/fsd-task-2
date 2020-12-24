@@ -1,0 +1,8 @@
+.dropdown__icon {
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@import './_expand/dropdown__icon_expand.scss';
+@import './_arrow/dropdown__icon_arrow.scss';

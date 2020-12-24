@@ -6,7 +6,6 @@ html(lang='ru')
         link(rel='icon' sizes='16x16 32x32 48x48' href='favicon.ico')
     body
         include ../../assets/components/logo/logo.pug
-        include ../../assets/components/label/label.pug
         include ../../assets/components/text-field/text-field.pug
         include ../../assets/components/dropdown/dropdown.pug
 
@@ -17,10 +16,14 @@ html(lang='ru')
                 div(class='container__block-1 block-1')
                     +text-field({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-1__text-field')
                     +text-field({'label': 'TEXT FIELD', 'value' : 'This is pretty awesome'})(class='block-1__focused-text-field')
-                    +dropdown({'label': 'DROPDOWN'})(class='block-1__guest-dropdown')
-                    +text-field({'label': 'MASKED TEXT FIELD', 'date_mask' : true})(class='block-1__masked-text-field')
-                    +dropdown({'label': 'DATE DROPDOWN'})(class='block-1__single-date-dropdown')
-                    +dropdown({'label': 'DATE DROPDOWN'})(class='block-1__chosen-single-date-dropdown')
+                    +dropdown({'label': 'DROPDOWN', 'value' : 'Сколько гостей', 'icon': 'expand'})(class='block-1__guest-dropdown')
+                    +text-field({'label': 'MASKED TEXT FIELD', 'date-mask' : true})(class='block-1__masked-text-field')
+
+                    div(class='container__dropdown-row')
+                        +dropdown({'label': 'DATE DROPDOWN', 'value' : 'ДД.ММ.ГГГГ', 'icon': 'expand'})(class='block-1__single-date-dropdown')
+                        +dropdown({'label': 'DATE DROPDOWN', 'value' : '19.08.2019', 'icon': 'expand'})(class='block-1__chosen-single-date-dropdown')
+
+                    +dropdown({'label': 'FILTER DATE DROPDOWN', 'value' : '19 авг - 23 авг', 'icon': 'expand'})(class='block-1__filter-date-dropdown')
 
                 div(class='container__block-2')
                 div(class='container__block-3')

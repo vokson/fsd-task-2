@@ -1,0 +1,9 @@
+.dropdown__label {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-bottom: 5px;
+}
+
+@import '../../label/label.scss'

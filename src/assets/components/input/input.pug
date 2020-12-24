@@ -1,0 +1,33 @@
+//- placeholder: placeholder
+//- value: text inside input
+
+//- Modificators:
+//- date-mask: input with date mask
+//- right-border-free: input without right border
+//- without-left-bottom-radius: input without right border
+
+mixin input(parameters)
+    -
+        let inputAttributes = {
+            'type': 'text',
+            'class': 'input',
+            'placeholder': parameters.placeholder,
+            'value': parameters.value
+        }
+
+        if (parameters['date-mask']) {
+            inputAttributes.class += ' input_date-mask';
+            inputAttributes.placeholder = 'ДД.ММ.ГГГГ';
+            inputAttributes.pattern = '^[0-3]{1}\\d{1}\\.[0-1]{1}\\d{1}\\.20\\d{2}$'
+        }
+
+        if (parameters['right-border-free']) {
+            inputAttributes.class += ' input_right-border-free';
+            inputAttributes.disabled = true
+        }
+
+         if (parameters['without-left-bottom-radius']) {
+            inputAttributes.class += ' input_without-left-bottom-radius';
+        }
+
+    input&attributes(inputAttributes)&attributes(attributes)

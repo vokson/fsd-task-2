@@ -1,0 +1,4 @@
+//- label: text of label
+mixin text-field__label(parameters)
+    include ../../label/label.pug
+    +label({'label': parameters.label})(class='text-field__label')

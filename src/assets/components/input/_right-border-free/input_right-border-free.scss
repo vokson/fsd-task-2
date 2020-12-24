@@ -1,0 +1,12 @@
+.input_right-border-free {
+  border-radius: 4px 0 0 4px;
+  border-width: 1px 0 1px 1px;
+  color: $color-dark-75;
+}
+
+.input_right-border-free:hover,
+.input_right-border-free:focus {
+  border-width: 1px 0 1px 1px;
+  color: $color-dark-75;
+  border-color: $color-dark-25;
+}

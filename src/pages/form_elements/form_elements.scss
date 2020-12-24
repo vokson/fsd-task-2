@@ -2,8 +2,8 @@
 @import '@styles/global-vars.scss';
 
 @import '@components/logo/logo.scss';
-@import '@components/label/label.scss';
 @import '@components/text-field/text-field.scss';
+@import '@components/dropdown/dropdown.scss';
 
 .page__logo {
   position: absolute;
@@ -24,11 +24,35 @@
 .block-1 {
   width: 100%;
   .block-1__focused-text-field,
-  .block-1__masked-text-field,
-  .block-1__guest-dropdown,
-  .block-1__single-date-dropdown,
-  .block-1__chosen-single-date-dropdown
-   {
+  .block-1__guest-dropdown {
     margin-top: 20px;
+  }
+
+  .block-1__masked-text-field {
+    margin-top: 22.56px;
+  }
+
+  .container__dropdown-row {
+    margin-top: 40px;
+    display: flex;
+
+    .block-1__single-date-dropdown,
+    .block-1__chosen-single-date-dropdown {
+      width: 150px;
+      flex-grow: 0;
+    }
+
+    .block-1__single-date-dropdown {
+      margin-right: auto;
+    }
+
+    .block-1__chosen-single-date-dropdown {
+      margin-left: auto;
+    }
+  }
+
+  .block-1__filter-date-dropdown {
+    width: 266px;
+    margin-top: 40px;
   }
 }

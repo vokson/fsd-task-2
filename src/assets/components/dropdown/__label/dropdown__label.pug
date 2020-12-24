@@ -1,0 +1,4 @@
+//- label: text of label
+mixin dropdown__label(parameters)
+    include ../../label/label.pug
+    +label({'label': parameters.label})(class='dropdown__label')

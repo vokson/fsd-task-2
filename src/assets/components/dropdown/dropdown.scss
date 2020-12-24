@@ -1,8 +1,12 @@
-@import './__input/text-field__select.scss';
-@import './__label/text-field__label.scss';
-
 .dropdown {
+  display: grid;
+  grid-template-columns: auto 44px;
+  
   width: 100%;
-  min-width: 260px;
+  min-width: 150px;
   min-height: 44px;
 }
+
+@import './__button/dropdown__button.scss';
+@import './__input/dropdown__input.scss';
+@import './__label/dropdown__label.scss';

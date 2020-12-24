@@ -1,8 +1,8 @@
-@import './__input/text-field__input.scss';
-@import './__label/text-field__label.scss';
-
 .text-field {
   width: 100%;
-  min-width: 260px;
+  min-width: 106px;
   min-height: 44px;
 }
+
+@import './__input/text-field__input.scss';
+@import './__label/text-field__label.scss';
