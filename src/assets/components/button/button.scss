@@ -1,0 +1,37 @@
+.button {
+    display: block;
+    box-sizing: border-box;
+
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    height: 15px;
+
+    @include normal-font-style;
+    font-size: 11px;
+    
+    font-weight: bold;
+    color: $color-purple;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.button:active {
+    color: $color-dark-50;
+}
+
+@import './_shape_circle/button_shape_circle.scss';
+@import './_shape_star/button_shape_star.scss';
+
+@import './_icon_arrow/button_icon_arrow.scss';
+@import './_icon_heart/button_icon_heart.scss';
+
+@import './_size_b/button_size_b.scss';
+@import './_size_m/button_size_m.scss';
+@import './_size_s/button_size_s.scss';
+
+@import './_background_border/button_background_border.scss';
+@import './_background_purple-gradient/button_background_purple-gradient.scss';

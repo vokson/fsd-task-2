@@ -4,6 +4,8 @@
 @import '@components/logo/logo.scss';
 @import '@components/textfield/textfield.scss';
 @import '@components/buttonfield/buttonfield.scss';
+@import '@components/button/button.scss';
+
 
 .page__logo {
   position: absolute;
@@ -22,6 +24,12 @@
 }
 
 .block-1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+
   width: 100%;
   .block-1__focused-textfield,
   .block-1__guest-buttonfield {
@@ -32,7 +40,7 @@
     margin-top: 22.56px;
   }
 
-  .container__buttonfield-row {
+  .block-1__buttonfield-row {
     margin-top: 40px;
     display: flex;
 
@@ -59,5 +67,61 @@
   .block-1__subscription-textfield {
     width: 267px;
     margin-top: 41px;
+  }
+}
+
+.block-2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  width: 100%;
+
+  .block-2__checkbox-buttons {
+    margin-top: 20px;
+  }
+}
+
+.block-3 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  width: 100%;
+
+  .block-3__range-slider {
+    margin-top: 0px;
+  }
+
+  .block-3__buttons {
+    margin-top: 22px;
+  }
+
+  .block-3__button-row-1,
+  .block-3__button-row-2 {
+    display: flex;
+  }
+
+  .block-3__button-row-1 {
+    margin-top: 15px;
+  }
+
+  .block-3__button-row-2 {
+    margin-top: 30px;
+  }
+
+  .block-3__button-1,
+  .block-3__button-2,
+  .block-3__button-3,
+  .block-3__button-4
+   {
+    width: 99px;
+  }
+
+  .block-3__button-2,
+  .block-3__button-4 {
+    margin-left: 19px;
   }
 }

@@ -6,8 +6,10 @@ html(lang='ru')
         link(rel='icon' sizes='16x16 32x32 48x48' href='favicon.ico')
     body
         include ../../assets/components/logo/logo.pug
+        include ../../assets/components/label/label.pug
         include ../../assets/components/textfield/textfield.pug
         include ../../assets/components/buttonfield/buttonfield.pug
+        include ../../assets/components/button/button.pug
 
         +logo({'size': 'm'})(class='page__logo')
         
@@ -19,16 +21,35 @@ html(lang='ru')
                     +buttonfield({'label': 'DROPDOWN', 'value' : 'Сколько гостей', 'icon': 'expand', 'disabled': true})(class='block-1__guest-buttonfield')
                     +textfield({'label': 'MASKED TEXT FIELD', 'date-mask' : true})(class='block-1__masked-textfield')
 
-                    div(class='container__buttonfield-row')
+                    div(class='block-1__buttonfield-row')
                         +buttonfield({'label': 'DATE DROPDOWN', 'value' : 'ДД.ММ.ГГГГ', 'icon': 'expand', 'disabled': true})(class='block-1__single-date-buttonfield')
                         +buttonfield({'label': 'DATE DROPDOWN', 'value' : '19.08.2019', 'icon': 'expand', 'disabled': true})(class='block-1__chosen-single-date-buttonfield')
 
                     +buttonfield({'label': 'FILTER DATE DROPDOWN', 'value' : '19 авг - 23 авг', 'icon': 'expand', 'disabled': true})(class='block-1__filter-date-buttonfield')
                     +buttonfield({'label': 'SUBSCRIPTION TEXT FIELD', 'placeholder' : 'Email', 'icon': 'arrow'})(class='block-1__subscription-textfield')
 
-                div(class='container__block-2')
-                div(class='container__block-3')
-                div(class='container__block-4')
-                div(class='container__block-5')
-                div(class='container__block-6')
-                div(class='container__block-7')
+                div(class='container__block-2 block-2')
+                    +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-2__checkbox-buttons')
+
+                div(class='container__block-3 block-3')
+                    +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-3__range-slider')
+                   
+                    div(class='block-3__buttons')
+                        +label({'label': 'BUTTONS'})
+
+                        div(class='block-3__button-row-1')
+                            +button({'text': 'CLICK ME', 'shape' : 'circle', 'size' : 'b', 'background' : 'purple-gradient'})(class='block-3__button-1')
+                            +button({'text': 'CLICK ME', 'shape' : 'circle', 'size' : 'b', 'background' : 'purple-gradient'})(class='block-3__button-2')
+
+                        div(class='block-3__button-row-2')
+                            +button({'text': 'CLICK ME', 'shape' : 'circle', 'size' : 'b', 'background' : 'border'})(class='block-3__button-3')
+                            +button({'text': 'CLICK ME', 'shape' : 'circle', 'size' : 'b', 'background' : 'border'})(class='block-3__button-4')
+
+                        div(class='block-3__button-row-2')
+                        div(class='block-3__button-row-3')
+                        div(class='block-3__button-row-4')
+
+                div(class='container__block-4 block-4')
+                div(class='container__block-5 block-5')
+                div(class='container__block-6 block-6')
+                div(class='container__block-7 block-7')

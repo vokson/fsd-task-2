@@ -1,0 +1,59 @@
+//- shape: (circle|star)
+//- text: text inside button
+//- icon: (arrow|heart)
+//- size: (s|m)
+mixin button(parameters)
+    -
+        let attrs = {
+            class: 'button',
+            value :parameters.text,
+            type :'button'
+        }
+
+        switch (parameters.shape) {
+            case 'circle':
+                attrs.class += ' button_shape_circle';
+                break;
+            case 'star':
+                attrs.class += ' button_shape_star';
+                attrs.value = '';
+        }
+
+        switch (parameters.shape) {
+            case 'circle':
+                attrs.class += ' button_shape_circle';
+                break;
+            case 'star':
+                attrs.class += ' button_shape_star';
+                attrs.value = '';
+        }
+
+        switch (parameters.icon) {
+            case 'arrow':
+                attrs.class += ' button_icon_arrow';
+                break;
+            case 'heart':
+                attrs.class += ' button_icon_heart';
+        }
+
+        switch (parameters.size) {
+            case 'b':
+                attrs.class += ' button_size_b';
+                break;
+            case 'm':
+                attrs.class += ' button_size_m';
+                break;
+            case 's':
+                attrs.class += ' button_size_s';
+        }
+
+        switch (parameters.background) {
+            case 'purple-gradient':
+                attrs.class += ' button_background_purple-gradient';
+                break;
+            case 'border':
+                attrs.class += ' button_background_border';
+        }
+
+    div&attributes(attributes)&attributes(attrs)
+    

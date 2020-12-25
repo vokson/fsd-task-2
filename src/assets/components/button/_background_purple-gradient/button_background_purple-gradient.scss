@@ -1,0 +1,9 @@
+.button_background_purple-gradient {
+  background: linear-gradient(180deg, $color-purple 0%, #8ba4f9 100%);
+  color: white;
+}
+
+.button_background_purple-gradient:active {
+  color: white;
+  opacity: 0.5;
+}
