@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    position: relative;
     
     margin: 0;
     padding: 0;
@@ -25,15 +26,19 @@
 @import './_shape_circle/button_shape_circle.scss';
 @import './_shape_star/button_shape_star.scss';
 
-@import './__icon_arrow/button__icon_arrow.scss';
-@import './__icon_heart/button__icon_heart.scss';
+@import './__icon/button__icon.scss';
 
 @import './_size_b/button_size_b.scss';
 @import './_size_m/button_size_m.scss';
 @import './_size_s/button_size_s.scss';
 
-@import './_background_border/button_background_border.scss';
+@import './_font_b/button_font_b.scss';
+@import './_font_m/button_font_m.scss';
+@import './_font_s/button_font_s.scss';
+
+@import './_background_none/button_background_none.scss';
 @import './_background_purple-gradient/button_background_purple-gradient.scss';
+@import './_background_green-gradient/button_background_green-gradient.scss';
 
 @import './_border_thin/button_border_thin.scss';
 @import './_border_thick/button_border_thick.scss';

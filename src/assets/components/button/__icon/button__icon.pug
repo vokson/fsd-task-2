@@ -1,0 +1,8 @@
+//- icon: (arrow|heart)
+mixin button__icon(parameters)
+    case parameters.icon
+        when 'heart'
+            i(class='material-icons button__icon button__icon_heart') favorite
+        when 'arrow'
+            i(class='material-icons button__icon button__icon_arrow') arrow_forward
+    

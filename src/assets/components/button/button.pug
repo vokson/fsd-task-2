@@ -1,8 +1,9 @@
 //- shape: (circle|star)
 //- text: text inside button
 //- icon: (arrow|heart)
-//- size: (s|m)
-//- background: (purple-gradient)
+//- size: (s|m|b)
+//- font: (s|m|b)
+//- background: (none|purple-gradient|green-gradient)
 //- border: (s|m)
 mixin button(parameters)
     -
@@ -39,9 +40,28 @@ mixin button(parameters)
                 attrs.class += ' button_size_s';
         }
 
+        switch (parameters.font) {
+            case 'b':
+                attrs.class += ' button_font_b';
+                break;
+            case 'm':
+                attrs.class += ' button_font_m';
+                break;
+            case 's':
+                attrs.class += ' button_font_s';
+        }
+
         switch (parameters.background) {
             case 'purple-gradient':
                 attrs.class += ' button_background_purple-gradient';
+                break;
+
+            case 'green-gradient':
+                attrs.class += ' button_background_green-gradient';
+                break;
+
+            case 'none':
+                attrs.class += ' button_background_none';
                 break;
         }
 
@@ -50,13 +70,8 @@ mixin button(parameters)
             attrs.class += (parameters.border == 'thin') ? ' button_border_thin' : ' button_border_thick';
         }
 
-    include ./__icon_arrow/button__icon_arrow.pug
-    include ./__icon_heart/button__icon_heart.pug
+    include ./__icon/button__icon.pug
 
     div&attributes(attributes)&attributes(attrs)= parameters.text
-        case parameters.icon
-            when 'heart'
-                +button__icon_heart()
-            when 'arrow'
-                +button__icon_arrow()
-    
+        if parameters.icon
+            +button__icon({'icon': parameters.icon})

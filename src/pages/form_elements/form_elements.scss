@@ -103,7 +103,9 @@
 
   .block-3__button-row-1,
   .block-3__button-row-2,
-  .block-3__button-row-3 {
+  .block-3__button-row-3,
+  .block-3__button-row-4,
+  .block-3__button-row-5 {
     display: flex;
   }
 
@@ -117,6 +119,14 @@
 
   .block-3__button-row-3 {
     margin-top: 31px;
+  }
+
+  .block-3__button-row-4 {
+    margin-top: 40px;
+  }
+
+  .block-3__button-row-5 {
+    margin-top: 16px;
   }
 
   .block-3__button-1,
@@ -143,6 +153,12 @@
 
   .block-3__button-7 {
     margin-top: 30px;
+  }
+
+  .block-3__button-8,
+  .block-3__button-9,
+  .block-3__button-10 {
+   width: 40px;
   }
 
 }

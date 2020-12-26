@@ -1,0 +1,6 @@
+.button_font_b {
+  @include normal-font-style;
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  font-size: 11px;
+}
