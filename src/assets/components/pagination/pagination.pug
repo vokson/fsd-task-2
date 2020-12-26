@@ -1,0 +1,14 @@
+mixin pagination(parameters)
+    include ./__left/pagination__left.pug
+    include ./__middle/pagination__middle.pug
+    include ./__right/pagination__right.pug
+    include ./__caption/pagination__caption.pug
+
+    nav(class='pagination')&attributes(attributes)
+        +pagination__left({'text': '1'})
+        +pagination__middle({'text': '2'})
+        +pagination__middle({'text': '3'})
+        +pagination__middle({'text': '...'})
+        +pagination__middle({'text': '15'})
+        +pagination__right()
+        +pagination__caption({'text': '1 - 12 из 100+ вариантов аренды'})

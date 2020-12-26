@@ -5,6 +5,7 @@
 @import '@components/textfield/textfield.scss';
 @import '@components/buttonfield/buttonfield.scss';
 @import '@components/button/button.scss';
+@import '@components/pagination/pagination.scss';
 
 
 .page__logo {
@@ -155,10 +156,7 @@
     margin-top: 30px;
   }
 
-  .block-3__button-8,
-  .block-3__button-9,
-  .block-3__button-10 {
-   width: 40px;
+  .block-3__pagination {
+    width: 100%
   }
-
 }

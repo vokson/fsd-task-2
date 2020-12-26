@@ -1,0 +1,14 @@
+.pagination {
+    display: grid;
+    grid-template-columns: repeat(6, 40px);
+    row-gap: 8px;
+    min-width: 240px;
+    width: 240px;
+    padding: 0;
+    margin: 0;
+}
+
+@import './__left/pagination__left.scss';
+@import './__middle/pagination__middle.scss';
+@import './__right/pagination__right.scss';
+@import './__caption/pagination__caption.scss';
