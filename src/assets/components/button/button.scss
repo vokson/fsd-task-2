@@ -1,33 +1,32 @@
 .button {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
-
-    outline: none;
-    border: none;
-    padding: 0;
+    
     margin: 0;
-    background: none;
+    padding: 0;
     height: 15px;
 
-    @include normal-font-style;
-    font-size: 11px;
-    
-    font-weight: bold;
+    @include bold-font-style;
+    font-weight: 200;
+    font-size: 12px;
+
     color: $color-purple;
-    text-align: center;
+    user-select: none;
 
     cursor: pointer;
-}
 
-.button:active {
-    color: $color-dark-50;
+    &:active {
+        color: $color-dark-50;
+    }
 }
 
 @import './_shape_circle/button_shape_circle.scss';
 @import './_shape_star/button_shape_star.scss';
 
-@import './_icon_arrow/button_icon_arrow.scss';
-@import './_icon_heart/button_icon_heart.scss';
+@import './__icon_arrow/button__icon_arrow.scss';
+@import './__icon_heart/button__icon_heart.scss';
 
 @import './_size_b/button_size_b.scss';
 @import './_size_m/button_size_m.scss';
@@ -35,3 +34,6 @@
 
 @import './_background_border/button_background_border.scss';
 @import './_background_purple-gradient/button_background_purple-gradient.scss';
+
+@import './_border_thin/button_border_thin.scss';
+@import './_border_thick/button_border_thick.scss';

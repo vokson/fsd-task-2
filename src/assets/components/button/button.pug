@@ -2,11 +2,12 @@
 //- text: text inside button
 //- icon: (arrow|heart)
 //- size: (s|m)
+//- background: (purple-gradient)
+//- border: (s|m)
 mixin button(parameters)
     -
         let attrs = {
             class: 'button',
-            value :parameters.text,
             type :'button'
         }
 
@@ -16,16 +17,7 @@ mixin button(parameters)
                 break;
             case 'star':
                 attrs.class += ' button_shape_star';
-                attrs.value = '';
-        }
-
-        switch (parameters.shape) {
-            case 'circle':
-                attrs.class += ' button_shape_circle';
-                break;
-            case 'star':
-                attrs.class += ' button_shape_star';
-                attrs.value = '';
+                parameters.text = '';
         }
 
         switch (parameters.icon) {
@@ -51,9 +43,20 @@ mixin button(parameters)
             case 'purple-gradient':
                 attrs.class += ' button_background_purple-gradient';
                 break;
-            case 'border':
-                attrs.class += ' button_background_border';
         }
 
-    div&attributes(attributes)&attributes(attrs)
+        if (parameters.border) {
+            attrs.class += ' button_background_border';
+            attrs.class += (parameters.border == 'thin') ? ' button_border_thin' : ' button_border_thick';
+        }
+
+    include ./__icon_arrow/button__icon_arrow.pug
+    include ./__icon_heart/button__icon_heart.pug
+
+    div&attributes(attributes)&attributes(attrs)= parameters.text
+        case parameters.icon
+            when 'heart'
+                +button__icon_heart()
+            when 'arrow'
+                +button__icon_arrow()
     

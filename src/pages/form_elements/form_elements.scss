@@ -14,7 +14,9 @@
 }
 
 .page__container {
-  margin: 143px 141px;
+  margin-left: 141px;
+  margin-top: 143px;
+  
 }
 
 .container {
@@ -100,7 +102,8 @@
   }
 
   .block-3__button-row-1,
-  .block-3__button-row-2 {
+  .block-3__button-row-2,
+  .block-3__button-row-3 {
     display: flex;
   }
 
@@ -110,6 +113,10 @@
 
   .block-3__button-row-2 {
     margin-top: 30px;
+  }
+
+  .block-3__button-row-3 {
+    margin-top: 31px;
   }
 
   .block-3__button-1,
@@ -124,4 +131,18 @@
   .block-3__button-4 {
     margin-left: 19px;
   }
+
+  .block-3__button-5,
+  .block-3__button-6 {
+    width: 61px;
+  }
+
+  .block-3__button-6 {
+    margin-left: 20px;
+  }
+
+  .block-3__button-7 {
+    margin-top: 30px;
+  }
+
 }

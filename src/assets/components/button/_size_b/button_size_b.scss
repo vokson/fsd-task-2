@@ -1,5 +1,10 @@
 .button_size_b {
   height: 44px;
   padding-bottom: 3px;
-  letter-spacing: 0.5px;
+  
+
+  @include normal-font-style;
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  font-size: 11px;
 }
