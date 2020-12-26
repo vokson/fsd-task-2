@@ -1,0 +1,15 @@
+//- text
+//- Modificators:
+//- font: (s|m)
+mixin checkbox__caption(parameters)
+    -
+        cls = 'checkbox__caption'
+        switch (parameters.font) {
+            case 's':
+                cls += ' checkbox__caption_font_s';
+                break;
+            case 'm':
+                cls += ' checkbox__caption_font_m'
+        }
+
+    p(class=cls)= parameters.text

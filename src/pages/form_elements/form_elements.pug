@@ -11,6 +11,7 @@ html(lang='ru')
         include ../../assets/components/buttonfield/buttonfield.pug
         include ../../assets/components/button/button.pug
         include ../../assets/components/pagination/pagination.pug
+        include ../../assets/components/checkbox/checkbox.pug
 
         +logo({'size': 'm'})(class='page__logo')
         
@@ -30,7 +31,10 @@ html(lang='ru')
                     +buttonfield({'label': 'SUBSCRIPTION TEXT FIELD', 'placeholder' : 'Email', 'icon': 'arrow'})(class='block-1__subscription-textfield')
 
                 div(class='container__block-2 block-2')
-                    +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-2__checkbox-buttons')
+                     div(class='block-2__checkbox-buttons')
+                        +label({'label': 'CHECKBOX BUTTONS'})
+                        +checkbox({'description': 'Можно курить', 'font': 'm'})(class='block-2__checkbox-1')
+                        +checkbox({'description': 'Ширина коридоров в номере не менее 91 см.', 'font': 's', 'caption': 'Широкий коридор'})(class='block-2__checkbox-2')
 
                 div(class='container__block-3 block-3')
                     +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-3__range-slider')

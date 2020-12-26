@@ -6,6 +6,7 @@
 @import '@components/buttonfield/buttonfield.scss';
 @import '@components/button/button.scss';
 @import '@components/pagination/pagination.scss';
+@import '@components/checkbox/checkbox.scss';
 
 
 .page__logo {
@@ -82,7 +83,15 @@
   width: 100%;
 
   .block-2__checkbox-buttons {
-    margin-top: 20px;
+    margin-top: -2px;
+
+    .block-2__checkbox-1 {
+      margin-top: 16px;
+    }
+
+    .block-2__checkbox-2 {
+      margin-top: 10px;
+    }
   }
 }
 

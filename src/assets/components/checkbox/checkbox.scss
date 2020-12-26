@@ -1,0 +1,9 @@
+.checkbox {
+    display: grid;
+    grid-template-columns: 20px auto;
+    column-gap: 10px;
+    
+}
+
+@import './__text/checkbox__text.scss';
+@import './__input/checkbox__input.scss';

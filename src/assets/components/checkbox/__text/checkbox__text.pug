@@ -1,0 +1,11 @@
+//- description
+//- caption
+//- Modificators:
+//- font: (s|m) - font size of description
+mixin checkbox__text(parameters)
+    include ../__caption/checkbox__caption.pug
+    include ../__description/checkbox__description.pug
+
+    div(class='checkbox__text')
+        +checkbox__description({'text': parameters.description})
+        +checkbox__caption({'text': parameters.caption, 'font': parameters.font})

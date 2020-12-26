@@ -1,0 +1,15 @@
+.checkbox__input {
+    position: relative;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.checkbox__input::before {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid red;
+    opacity: 1;
+    z-index: 1;
+}
