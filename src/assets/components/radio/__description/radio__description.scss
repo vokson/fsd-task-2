@@ -1,0 +1,10 @@
+.radio__description {
+  @include normal-font-style;
+//   color: $color-dark-75;
+  color: inherit;
+  font-size: 14px;
+}
+
+// .radio__input + .radio__description {
+//   color: red;
+// }

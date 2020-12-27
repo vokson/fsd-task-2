@@ -1,3 +1,5 @@
+//- name
+//- value
 //- description
 //- caption
 //- checked
@@ -8,5 +10,5 @@ mixin checkbox(parameters)
     include ./__input/checkbox__input.pug
 
     div(class='checkbox')&attributes(attributes)
-        +checkbox__input({'checked': parameters.checked})
+        +checkbox__input({'checked': parameters.checked, 'name': parameters.name, 'value': parameters.value})
         +checkbox__text({'caption': parameters.caption, 'description': parameters.description, 'font': parameters.font})

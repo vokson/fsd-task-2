@@ -12,6 +12,7 @@ html(lang='ru')
         include ../../assets/components/button/button.pug
         include ../../assets/components/pagination/pagination.pug
         include ../../assets/components/checkbox/checkbox.pug
+        include ../../assets/components/radio/radio.pug
 
         +logo({'size': 'm'})(class='page__logo')
         
@@ -31,11 +32,19 @@ html(lang='ru')
                     +buttonfield({'label': 'SUBSCRIPTION TEXT FIELD', 'placeholder' : 'Email', 'icon': 'arrow'})(class='block-1__subscription-textfield')
 
                 div(class='container__block-2 block-2')
-                     div(class='block-2__checkbox-buttons')
+                    
+                    div(class='block-2__checkbox-buttons')
                         +label({'label': 'CHECKBOX BUTTONS'})
-                        +checkbox({'description': 'Можно курить', 'font': 'm'})(class='block-2__checkbox-1')
-                        +checkbox({'description': 'Можно с питомцами', 'font': 'm', 'checked': true})(class='block-2__checkbox-2')
-                        +checkbox({'description': 'Можно пригласить гостей (до 10 человек)', 'font': 'm', 'checked': true})(class='block-2__checkbox-3')
+                        +checkbox({'name' : 'allowed', 'value' : 'smoke', 'description': 'Можно курить', 'font': 'm'})(class='block-2__checkbox-1')
+                        +checkbox({'name' : 'allowed', 'value' : 'pets', 'description': 'Можно с питомцами', 'font': 'm', 'checked': true})(class='block-2__checkbox-2')
+                        +checkbox({'name' : 'allowed', 'value' : 'guests', 'description': 'Можно пригласить гостей (до 10 человек)', 'font': 'm', 'checked': true})(class='block-2__checkbox-3')
+
+                    div(class='block-2__radio-buttons')
+                        +label({'label': 'RADIO BUTTONS'})
+
+                    div(class='block-2__radio-row')
+                        +radio({'name' : 'gender', 'value' : 'male', 'description': 'Мужчина', 'checked': true})(class='block-2__radio-man')
+                        +radio({'name' : 'gender', 'value' : 'female', 'description': 'Женщина'})(class='block-2__radio-woman')
 
                 div(class='container__block-3 block-3')
                     +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-3__range-slider')

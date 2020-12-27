@@ -1,0 +1,15 @@
+//- name
+//- value
+//- description
+//- checked
+mixin radio(parameters)
+    include ./__description/radio__description.pug
+    include ./__input/radio__input.pug
+
+    -
+        let cls = 'radio';
+        cls += (parameters.checked) ? ' radio_checked' : '';
+
+    div(class=cls)&attributes(attributes)
+        +radio__input({'checked': parameters.checked, 'name': parameters.name, 'value': parameters.value})
+        +radio__description({'text': parameters.description})

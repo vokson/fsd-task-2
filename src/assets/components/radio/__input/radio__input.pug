@@ -1,8 +1,8 @@
 //- name
 //- value
 //- checked
-mixin checkbox__input(parameters)
-    span(class='checkbox__input')
+mixin radio__input(parameters)
+    span(class='radio__input')
         -
             let attrs = {}
             if (parameters.checked) {
@@ -17,5 +17,7 @@ mixin checkbox__input(parameters)
                 attrs['value'] = parameters.value
             }
             
-        input(class='checkbox__native' type='checkbox')&attributes(attrs)
-        span(class='checkbox__control')
+        input(class='radio__native' type='radio')&attributes(attrs)
+        span(class='radio__border')
+        span(class='radio__center')
+        

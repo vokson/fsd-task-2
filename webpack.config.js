@@ -1,92 +1,92 @@
-const path = require('path')
-const HTMLWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin')
-const TerserWebpackPlugin = require('terser-webpack-plugin')
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const webpack = require('webpack');
+const path = require('path');
 
-const isDev = process.env.NODE_ENV === 'development'
-const isProd = !isDev
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
+const isDev = process.env.NODE_ENV === 'development';
+const isProd = !isDev;
 
 const optimization = () => {
   const config = {
     splitChunks: {
-      chunks: 'all'
-    }
-  }
+      chunks: 'all',
+    },
+  };
 
   if (isProd) {
     config.minimizer = [
       new OptimizeCssAssetWebpackPlugin(),
-      new TerserWebpackPlugin()
-    ]
+      new TerserWebpackPlugin(),
+    ];
   }
 
-  return config
-}
+  return config;
+};
 
-const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
+const filename = (ext) => (isDev ? `[name].${ext}` : `[name].[hash].${ext}`);
 
-const cssLoaders = extra => {
+const cssLoaders = (extra) => {
   const loaders = [
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
         hmr: isDev,
-        reloadAll: true
+        reloadAll: true,
       },
     },
-    'css-loader'
-  ]
+    'css-loader',
+  ];
 
   if (extra) {
-    loaders.push(extra)
+    loaders.push(extra);
   }
 
-  return loaders
-}
+  return loaders;
+};
 
-const babelOptions = preset => {
+const babelOptions = (preset) => {
   const opts = {
-    presets: [
-      '@babel/preset-env'
-    ],
-    plugins: [
-      '@babel/plugin-proposal-class-properties'
-    ]
-  }
+    presets: ['@babel/preset-env'],
+    plugins: ['@babel/plugin-proposal-class-properties'],
+  };
 
   if (preset) {
-    opts.presets.push(preset)
+    opts.presets.push(preset);
   }
 
-  return opts
-}
-
+  return opts;
+};
 
 const jsLoaders = () => {
-  const loaders = [{
-    loader: 'babel-loader',
-    options: babelOptions()
-  }]
+  const loaders = [
+    {
+      loader: 'babel-loader',
+      options: babelOptions(),
+    },
+  ];
 
   if (isDev) {
-    loaders.push('eslint-loader')
+    loaders.push('eslint-loader');
   }
 
-  return loaders
-}
+  return loaders;
+};
 
 const plugins = () => {
   const base = [
+    
     new HTMLWebpackPlugin({
       template: './pages/color_type/color_type.pug',
       filename: './color_type.html',
       minify: {
-            collapseWhitespace: isProd
-          }
+        collapseWhitespace: isProd,
+      },
     }),
     // new HTMLWebpackPlugin({
     //   template: './pages/header_footer/header_footer.pug',
@@ -100,27 +100,27 @@ const plugins = () => {
       template: './pages/form_elements/form_elements.pug',
       filename: './index.html',
       minify: {
-            collapseWhitespace: isProd
-          }
+        collapseWhitespace: isProd,
+      },
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
-        {
-          from: path.resolve(__dirname, 'src/favicon.ico'),
-          to: path.resolve(__dirname, 'dist')
-        }
-      ]),
+      {
+        from: path.resolve(__dirname, 'src/favicon.ico'),
+        to: path.resolve(__dirname, 'dist'),
+      },
+    ]),
     new MiniCssExtractPlugin({
-      filename: filename('css')
-    })
-  ]
+      filename: filename('css'),
+    }),
+  ];
 
   if (isProd) {
-    base.push(new BundleAnalyzerPlugin())
+    base.push(new BundleAnalyzerPlugin());
   }
 
-  return base
-}
+  return base;
+};
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
@@ -128,12 +128,16 @@ module.exports = {
   entry: {
     color_type: ['./pages/color_type/color_type.scss'],
     // header_footer: ['@babel/polyfill', './pages/header_footer/header_footer.js', './pages/header_footer/header_footer.scss'],
-    form_elements: ['@babel/polyfill', './pages/form_elements/form_elements.js', './pages/form_elements/form_elements.scss']
+    form_elements: [
+      '@babel/polyfill',
+      './pages/form_elements/form_elements.js',
+      './pages/form_elements/form_elements.scss',
+    ],
     // form_elements: ['@babel/polyfill', './pages/form_elements/form_elements.js']
   },
   output: {
     filename: filename('js'),
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
     extensions: ['.js', '.json', '.png'],
@@ -143,12 +147,12 @@ module.exports = {
       '@components': path.resolve(__dirname, 'src/assets/components'),
       '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
       '@': path.resolve(__dirname, 'src'),
-    }
+    },
   },
   optimization: optimization(),
   devServer: {
     port: 4200,
-    hot: isDev
+    hot: isDev,
   },
   devtool: isDev ? 'source-map' : '',
   plugins: plugins(),
@@ -156,31 +160,31 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: cssLoaders()
+        use: cssLoaders(),
       },
       {
         test: /\.less$/,
-        use: cssLoaders('less-loader')
+        use: cssLoaders('less-loader'),
       },
       {
         test: /\.s[ac]ss$/,
-        use: cssLoaders('sass-loader')
+        use: cssLoaders('sass-loader'),
       },
       {
         test: /\.(png|jpg|svg|gif|ico)$/,
-        use: ['file-loader']
+        use: ['file-loader'],
       },
       {
         test: /\.(ttf|woff|woff2|eot|otf)$/,
-        use: ['file-loader']
+        use: ['file-loader'],
       },
       {
         test: /\.xml$/,
-        use: ['xml-loader']
+        use: ['xml-loader'],
       },
       {
         test: /\.csv$/,
-        use: ['csv-loader']
+        use: ['csv-loader'],
       },
       {
         test: /\.pug$/,
@@ -188,22 +192,22 @@ module.exports = {
         loader: {
           loader: 'pug-loader',
           options: {
-            pretty: true
-          }
-        }
+            pretty: true,
+          },
+        },
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: jsLoaders()
+        use: jsLoaders(),
       },
       {
         test: /\.ts$/,
         exclude: /node_modules/,
         loader: {
           loader: 'babel-loader',
-          options: babelOptions('@babel/preset-typescript')
-        }
+          options: babelOptions('@babel/preset-typescript'),
+        },
       },
       // {
       //   test: /\.jsx$/,
@@ -213,6 +217,6 @@ module.exports = {
       //     options: babelOptions('@babel/preset-react')
       //   }
       // }
-    ]
-  }
-}
+    ],
+  },
+};

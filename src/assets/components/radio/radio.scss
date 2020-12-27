@@ -1,0 +1,10 @@
+.radio {
+    display: grid;
+    grid-template-columns: 20px auto;
+    column-gap: 10px;
+    color: $color-dark-50;
+}
+
+@import './_checked/radio_checked.scss';
+@import './__description/radio__description.scss';
+@import './__input/radio__input.scss';
