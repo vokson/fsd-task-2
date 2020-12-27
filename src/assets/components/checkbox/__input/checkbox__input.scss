@@ -1,15 +1,39 @@
 .checkbox__input {
-    position: relative;
-    z-index: -1;
-    opacity: 0.1;
-}
+  display: grid;
+  grid-template-areas: 'checkbox';
 
-.checkbox__input::before {
-    display: block;
-    content: '';
+  > * {
+    grid-area: checkbox;
+  }
+
+  .checkbox__native {
+    opacity: 0;
     width: 20px;
     height: 20px;
-    border: 1px solid red;
-    opacity: 1;
-    z-index: 1;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  .checkbox__control {
+    display: inline-grid;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px $color-dark-25 solid;
+    box-sizing: border-box;
+    background-image: url('~@components/checkbox/__input/checked.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 0;
+  }
+
+  .checkbox__native:hover + .checkbox__control {
+    border-color: $color-purple;
+  }
+
+  .checkbox__native:checked + .checkbox__control {
+    background-size: auto;
+    border-color: $color-purple;
+  }
 }

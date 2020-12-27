@@ -1,3 +1,7 @@
 .checkbox__caption {
-    
+    @include bold-font-style;
+    color: $color-dark-75;
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 5px;
 }

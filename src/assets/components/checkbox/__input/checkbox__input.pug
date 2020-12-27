@@ -1,2 +1,10 @@
-mixin checkbox__input
-    input(class='checkbox__input' type='checkbox')
+//- checked
+mixin checkbox__input(parameters)
+    span(class='checkbox__input')
+        -
+            let attrs = {}
+            if (parameters.checked) {
+                attrs['checked'] = true
+            }
+        input(class='checkbox__native' type='checkbox')&attributes(attrs)
+        span(class='checkbox__control')

@@ -7,5 +7,8 @@ mixin checkbox__text(parameters)
     include ../__description/checkbox__description.pug
 
     div(class='checkbox__text')
-        +checkbox__description({'text': parameters.description})
-        +checkbox__caption({'text': parameters.caption, 'font': parameters.font})
+        if parameters.caption
+            +checkbox__caption({'text': parameters.caption})
+        if parameters.description
+            +checkbox__description({'text': parameters.description, 'font': parameters.font})
+        

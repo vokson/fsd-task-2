@@ -1,5 +1,6 @@
 //- description
 //- caption
+//- checked
 //- Modificators:
 //- font: (s|m) - font size of description
 mixin checkbox(parameters)
@@ -7,5 +8,5 @@ mixin checkbox(parameters)
     include ./__input/checkbox__input.pug
 
     div(class='checkbox')&attributes(attributes)
-        +checkbox__input()
-        +checkbox__text(parameters)
+        +checkbox__input({'checked': parameters.checked})
+        +checkbox__text({'caption': parameters.caption, 'description': parameters.description, 'font': parameters.font})
