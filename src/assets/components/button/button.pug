@@ -1,77 +1,45 @@
-//- shape: (circle|star)
 //- text: text inside button
-//- icon: (arrow|heart)
+//- icon: (arrow|heart|heart-border)
+//- Modificators:
 //- size: (s|m|b)
-//- font: (s|m|b)
-//- background: (none|purple-gradient|green-gradient)
-//- border: (s|m)
+//- font: (small|medium|normal|big)
+//- font-color: (dark-gray|dark-gray|white|purple)
+//- background: (gray|purple-gradient|green-gradient)
+//- border: (thick|thin)
+//- opacity
+
 mixin button(parameters)
     -
-        let attrs = {
-            class: 'button',
-            type :'button'
+        let classes = ['button']
+
+        if (parameters.size) {
+            classes.push('button_size_' + parameters.size);
         }
 
-        switch (parameters.shape) {
-            case 'circle':
-                attrs.class += ' button_shape_circle';
-                break;
-            case 'star':
-                attrs.class += ' button_shape_star';
-                parameters.text = '';
+        if (parameters.font) {
+            classes.push('button_font_' + parameters.font);
         }
 
-        switch (parameters.icon) {
-            case 'arrow':
-                attrs.class += ' button_icon_arrow';
-                break;
-            case 'heart':
-                attrs.class += ' button_icon_heart';
+        if (parameters['font-color']) {
+            classes.push('button_font-color_' + parameters['font-color']);
         }
 
-        switch (parameters.size) {
-            case 'b':
-                attrs.class += ' button_size_b';
-                break;
-            case 'm':
-                attrs.class += ' button_size_m';
-                break;
-            case 's':
-                attrs.class += ' button_size_s';
+        if (parameters.background) {
+            classes.push('button_background');
+            classes.push('button_background_' + parameters.background);
         }
 
-        switch (parameters.font) {
-            case 'b':
-                attrs.class += ' button_font_b';
-                break;
-            case 'm':
-                attrs.class += ' button_font_m';
-                break;
-            case 's':
-                attrs.class += ' button_font_s';
-        }
-
-        switch (parameters.background) {
-            case 'purple-gradient':
-                attrs.class += ' button_background_purple-gradient';
-                break;
-
-            case 'green-gradient':
-                attrs.class += ' button_background_green-gradient';
-                break;
-
-            case 'none':
-                attrs.class += ' button_background_none';
-                break;
+        if (parameters.opacity) {
+            classes.push('button_opacity');
         }
 
         if (parameters.border) {
-            attrs.class += ' button_background_border';
-            attrs.class += (parameters.border == 'thin') ? ' button_border_thin' : ' button_border_thick';
+            classes.push('button_border');
+            classes.push('button_border_' + parameters.border);
         }
 
     include ./__icon/button__icon.pug
 
-    div&attributes(attributes)&attributes(attrs)= parameters.text
+    div(type='button' class=classes)&attributes(attributes)= parameters.text
         if parameters.icon
             +button__icon({'icon': parameters.icon})

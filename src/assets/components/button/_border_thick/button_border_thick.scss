@@ -1,8 +1,7 @@
 .button_border_thick {
-  $border: 2px;
-  border: solid $border transparent;
+  border-width: 2px;
 
   &::before {
-    margin: -$border;
+    margin: -2px;
   }
 }

@@ -1,0 +1,26 @@
+//- text: text inside button
+//- Modificators:
+//- active
+
+mixin like-button(parameters)
+    include ../button/button.pug
+
+    -
+        let attrs = {
+            'text': parameters.text,
+            'size' : 's',
+            'font-color' : 'light-gray',
+            'font' : 'small',
+            'background' : 'gray',
+            'border': 'thin',
+            'icon': 'heart-border'
+        }
+
+        if (parameters.active) {
+            attrs['font-color'] = 'purple';
+            attrs.background  = 'purple-gradient';
+            attrs.border = 'thin';
+            attrs.icon = 'heart';
+        }
+
+    +button(attrs)&attributes(attributes)&attributes({'class': 'like-button'})

@@ -1,8 +1,11 @@
-//- icon: (arrow|heart)
+//- icon: (arrow|heart|heart-border)
 mixin button__icon(parameters)
+    - const cls = 'material-icons button__icon ';
     case parameters.icon
+        when 'heart-border'
+            i(class=cls + 'button__icon_heart') favorite_border
         when 'heart'
-            i(class='material-icons button__icon button__icon_heart') favorite_border
+            i(class=cls + 'button__icon_heart') favorite
         when 'arrow'
-            i(class='material-icons button__icon button__icon_arrow') arrow_forward
+            i(class=cls + 'button__icon_arrow') arrow_forward
     

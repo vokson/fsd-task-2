@@ -1,0 +1,5 @@
+.button_font_normal {
+    @include bold-font-style;
+    font-weight: 200;
+    font-size: 12px;
+}

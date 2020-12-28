@@ -1,9 +1,5 @@
 .button_background_green-gradient {
-  background: linear-gradient(180deg, $color-green 0%, #66d2ea 100%);
-  color: white;
-
-  &:active {
-    color: white;
-    opacity: 0.5;
+  &::before {
+    background: linear-gradient(180deg, $color-green 0%, #66d2ea 100%);
   }
 }
