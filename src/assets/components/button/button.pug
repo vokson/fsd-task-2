@@ -13,26 +13,27 @@ mixin button(parameters)
             classes.push('button_mode_text');
         }
 
-        if (parameters.theme == 'common-solid') {
+        if (
+            parameters.theme == 'common-solid' ||
+            parameters.theme == 'common-border'
+        ) {
             classes.push('button_size_b');
             classes.push('button_font_big');
-            classes.push('button_font-color_white');
             classes.push('button_background');
             classes.push('button_background_purple-gradient');
             classes.push('button_mode_shape');
+        }
+
+        if (parameters.theme == 'common-solid') {
+            classes.push('button_font-color_white');
         }
 
         if (parameters.theme == 'common-border') {
-            classes.push('button_size_b');
-            classes.push('button_font_big');
             classes.push('button_font-color_purple');
-            classes.push('button_background');
-            classes.push('button_background_purple-gradient');
             classes.push('button_border');
             classes.push('button_border_thick');
-            classes.push('button_mode_shape');
+            
         }
-
 
         if (parameters.theme == 'pagination') {
             classes.push('button_size_m');
@@ -40,23 +41,24 @@ mixin button(parameters)
             classes.push('button_font-color_dark-gray');
         }
 
-        if (parameters.theme == 'pagination-purple') {
+        if (
+            parameters.theme == 'pagination-purple' ||
+            parameters.theme == 'pagination-green'
+        ) {
             classes.push('button_size_m');
             classes.push('button_font_big');
             classes.push('button_background');
-            classes.push('button_background_purple-gradient');
             classes.push('button_font-color_white');
             classes.push('button_mode_shape');
         }
 
+        if (parameters.theme == 'pagination-purple') {
+            classes.push('button_background_purple-gradient');
+        }
+
         
         if (parameters.theme == 'pagination-green') {
-            classes.push('button_size_m');
-            classes.push('button_font_big');
-            classes.push('button_background');
             classes.push('button_background_green-gradient');
-            classes.push('button_font-color_white');
-            classes.push('button_mode_shape');
             icon = 'arrow';
         }
 
