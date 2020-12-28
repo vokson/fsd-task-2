@@ -58,8 +58,8 @@ html(lang='ru')
                         +label({'label': 'LIKE BUTTON'})
 
                         div(class='block-2__like-buttons-row')
-                            +like-button({'text': '2'})(class='block-2__like-off')
-                            +like-button({'text': '12', 'active' : true})(class='block-2__like-on')
+                            +button({'text': '2', 'theme': 'like'})(class='block-2__like-off')
+                            +button({'text': '12', 'theme': 'like', 'active' : true})(class='block-2__like-on')
 
                 div(class='container__block-3 block-3')
                     +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-3__range-slider')
@@ -68,18 +68,18 @@ html(lang='ru')
                         +label({'label': 'BUTTONS'})
 
                         div(class='block-3__button-row-1')
-                            +button({'text': 'CLICK ME', 'size' : 'b', 'font' : 'big', 'font-color' : 'white', 'background' : 'purple-gradient'})(class='block-3__button-1')
-                            +button({'text': 'CLICK ME', 'size' : 'b', 'font' : 'big', 'font-color' : 'white', 'background' : 'purple-gradient', 'opacity': true})(class='block-3__button-2')
+                            +button({'text': 'CLICK ME', 'theme' : 'common-solid'})(class='block-3__button-1')
+                            +button({'text': 'CLICK ME', 'theme' : 'common-solid'})(class='block-3__button-2')
 
                         div(class='block-3__button-row-2')
-                            +button({'text': 'CLICK ME', 'size' : 'b', 'font' : 'big', 'font-color' : 'purple', 'background' : 'purple-gradient', 'border': 'thick'})(class='block-3__button-3')
-                            +button({'text': 'CLICK ME', 'size' : 'b', 'font' : 'big', 'font-color' : 'purple', 'background' : 'purple-gradient', 'border': 'thick', 'opacity': true})(class='block-3__button-4')
+                            +button({'text': 'CLICK ME', 'theme' : 'common-border'})(class='block-3__button-3')
+                            +button({'text': 'CLICK ME', 'theme' : 'common-border'})(class='block-3__button-4')
                         
                         div(class='block-3__button-row-3')
-                            +button({'text': 'CLICK ME', 'font' : 'normal', 'font-color' : 'purple'})(class='block-3__button-5')
-                            +button({'text': 'CLICK ME', 'font' : 'normal', 'font-color' : 'dark-gray'})(class='block-3__button-6')
+                            +button({'text': 'CLICK ME', 'theme' : 'common'})(class='block-3__button-5')
+                            +button({'text': 'CLICK ME', 'theme' : 'common'})(class='block-3__button-6')
                         
-                        +button({'text': 'ПЕРЕЙТИ К ОПЛАТЕ', 'size' : 'b', 'font' : 'big', 'font-color' : 'white', 'background' : 'purple-gradient', 'icon': 'arrow'})(class='block-3__button-7')
+                        +button({'text': 'ПЕРЕЙТИ К ОПЛАТЕ', 'theme' : 'common-solid', 'icon': 'arrow'})(class='block-3__button-7')
 
                         div(class='block-3__button-row-4')
                             +label({'label': 'PAGINATION'})

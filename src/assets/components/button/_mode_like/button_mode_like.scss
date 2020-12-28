@@ -1,0 +1,24 @@
+.button_mode_like {
+  color: $color-dark-25;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: inherit;
+
+    background: $color-dark-25;
+  }
+}
+
+.button_active.button_mode_like {
+  color: $color-purple;
+  
+  &::before {
+    background: linear-gradient(180deg, $color-purple 0%, #8ba4f9 100%);
+  }
+}

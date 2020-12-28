@@ -1,0 +1,5 @@
+.button_mode_shape:active {
+  &::before {
+    opacity: 0.5;
+  }
+}

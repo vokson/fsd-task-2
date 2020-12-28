@@ -1,5 +1,27 @@
 .button__icon {
+    display: block;
     position: absolute;
+}
+
+.button__icon_heart:not(.button__icon_active) {
+    &.button__favorite,
+    &.button__arrow {
+        display: none;
+    }
+}
+
+.button__icon_heart.button__icon_active {
+    &.button__favorite-border,
+    &.button__arrow {
+        display: none;
+    }
+}
+
+.button__icon_arrow {
+    &.button__favorite-border,
+    &.button__favorite {
+        display: none;
+    }
 }
 
 @import './_arrow/button__icon_arrow.scss';

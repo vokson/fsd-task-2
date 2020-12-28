@@ -1,4 +1,6 @@
 //- text
 mixin pagination__middle(parameters)
     include ../../button/button.pug
-    +button({'text': parameters.text, 'size' : 'm', 'background' : 'none', 'font' : 'm'})(class='pagination__middle')
+    +button({'text': parameters.text, 'theme' : 'pagination'})(class='pagination__middle')
+
+    //- +button({'text': parameters.text, 'size' : 'm', 'background' : 'none', 'font' : 'm'})(class='pagination__middle')

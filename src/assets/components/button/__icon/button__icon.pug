@@ -1,11 +1,21 @@
 //- icon: (arrow|heart|heart-border)
 mixin button__icon(parameters)
-    - const cls = 'material-icons button__icon ';
-    case parameters.icon
-        when 'heart-border'
-            i(class=cls + 'button__icon_heart') favorite_border
-        when 'heart'
-            i(class=cls + 'button__icon_heart') favorite
-        when 'arrow'
-            i(class=cls + 'button__icon_arrow') arrow_forward
-    
+    -
+        let classes = ['material-icons', 'button__icon'];
+        switch (parameters.icon) {
+            case 'heart':
+                classes.push('button__icon_heart', 'button__icon_active');
+                break;
+
+            case 'heart-border':
+                classes.push('button__icon_heart');
+                break;
+
+            case 'arrow':
+                classes.push('button__icon_arrow');
+                break;
+        }
+
+    i(class=classes class='button__favorite-border') favorite_border
+    i(class=classes class='button__favorite') favorite
+    i(class=classes class='button__arrow') arrow_forward    

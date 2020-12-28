@@ -1,45 +1,80 @@
 //- text: text inside button
-//- icon: (arrow|heart|heart-border)
-//- Modificators:
-//- size: (s|m|b)
-//- font: (small|medium|normal|big)
-//- font-color: (dark-gray|dark-gray|white|purple)
-//- background: (gray|purple-gradient|green-gradient)
-//- border: (thick|thin)
-//- opacity
+//- theme: (common|common-border|common-solid|pagination-purple|pagination-green|pagination|like)
+//- icon: (arrow)
 
 mixin button(parameters)
     -
         let classes = ['button']
+        let icon = parameters.icon;
 
-        if (parameters.size) {
-            classes.push('button_size_' + parameters.size);
+        if (parameters.theme == 'common') {
+            classes.push('button_size_m');
+            classes.push('button_font_normal');
+            classes.push('button_mode_text');
         }
 
-        if (parameters.font) {
-            classes.push('button_font_' + parameters.font);
-        }
-
-        if (parameters['font-color']) {
-            classes.push('button_font-color_' + parameters['font-color']);
-        }
-
-        if (parameters.background) {
+        if (parameters.theme == 'common-solid') {
+            classes.push('button_size_b');
+            classes.push('button_font_big');
+            classes.push('button_font-color_white');
             classes.push('button_background');
-            classes.push('button_background_' + parameters.background);
+            classes.push('button_background_purple-gradient');
+            classes.push('button_mode_shape');
         }
 
-        if (parameters.opacity) {
-            classes.push('button_opacity');
-        }
-
-        if (parameters.border) {
+        if (parameters.theme == 'common-border') {
+            classes.push('button_size_b');
+            classes.push('button_font_big');
+            classes.push('button_font-color_purple');
+            classes.push('button_background');
+            classes.push('button_background_purple-gradient');
             classes.push('button_border');
-            classes.push('button_border_' + parameters.border);
+            classes.push('button_border_thick');
+            classes.push('button_mode_shape');
+        }
+
+
+        if (parameters.theme == 'pagination') {
+            classes.push('button_size_m');
+            classes.push('button_font_big');
+            classes.push('button_font-color_dark-gray');
+        }
+
+        if (parameters.theme == 'pagination-purple') {
+            classes.push('button_size_m');
+            classes.push('button_font_big');
+            classes.push('button_background');
+            classes.push('button_background_purple-gradient');
+            classes.push('button_font-color_white');
+            classes.push('button_mode_shape');
+        }
+
+        
+        if (parameters.theme == 'pagination-green') {
+            classes.push('button_size_m');
+            classes.push('button_font_big');
+            classes.push('button_background');
+            classes.push('button_background_green-gradient');
+            classes.push('button_font-color_white');
+            classes.push('button_mode_shape');
+            icon = 'arrow';
+        }
+
+        if (parameters.theme == 'like') {
+            classes.push('button_size_s');
+            classes.push('button_font_small');
+            classes.push('button_border');
+            classes.push('button_border_thin');
+            classes.push('button_mode_like');
+            icon = (parameters.active) ? 'heart' : 'heart-border';
+        }
+
+        if (parameters.active) {
+            classes.push('button_active');
         }
 
     include ./__icon/button__icon.pug
 
     div(type='button' class=classes)&attributes(attributes)= parameters.text
-        if parameters.icon
-            +button__icon({'icon': parameters.icon})
+        if icon
+            +button__icon({'icon': icon})
