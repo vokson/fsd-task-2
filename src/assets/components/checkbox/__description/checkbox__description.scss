@@ -1,7 +1,8 @@
 .checkbox__description {
     @include normal-font-style;
-    color: $color-dark-50;
 }
 
 @import './_font_m/checkbox__description_font_m.scss';
 @import './_font_s/checkbox__description_font_s.scss';
+@import './_color_dark/checkbox__description_color_dark.scss';
+@import './_color_light/checkbox__description_color_light.scss';

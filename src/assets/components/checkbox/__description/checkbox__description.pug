@@ -1,9 +1,11 @@
 //- text
 //- Modificators:
 //- font: (s|m) - font size of description
+//- color: (dark|light) - font color of description
 mixin checkbox__description(parameters)
     -
         let cls = 'checkbox__description'
-        cls += (parameters.font == 's') ? ' checkbox__description_font_s' : ' checkbox__description_font_m'
+        cls += (parameters.font == 's') ? ' checkbox__description_font_s' : ' checkbox__description_font_m';
+        cls += (parameters.color == 'dark') ? ' checkbox__description_color_dark' : ' checkbox__description_color_light';
 
     p(class=cls)= parameters.text

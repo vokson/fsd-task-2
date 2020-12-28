@@ -1,14 +1,18 @@
 //- description
 //- caption
-//- Modificators:
-//- font: (s|m) - font size of description
+//- toggle
 mixin checkbox__text(parameters)
     include ../__caption/checkbox__caption.pug
     include ../__description/checkbox__description.pug
 
     div(class='checkbox__text')
+        
+        -
+            let font = (parameters.caption) ? 's': 'm';
+            let color = (parameters.toggle) ? 'dark': 'light';
+
         if parameters.caption
             +checkbox__caption({'text': parameters.caption})
         if parameters.description
-            +checkbox__description({'text': parameters.description, 'font': parameters.font})
+            +checkbox__description({'text': parameters.description, 'font': font, 'color': color})
         

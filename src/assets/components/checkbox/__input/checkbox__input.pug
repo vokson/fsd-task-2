@@ -16,6 +16,15 @@ mixin checkbox__input(parameters)
             if (parameters.value) {
                 attrs['value'] = parameters.value
             }
-            
-        input(class='checkbox__native' type='checkbox')&attributes(attrs)
-        span(class='checkbox__control')
+
+            const addMod = (cls, isToggle) => {
+                cls = cls + ' ' + cls;
+                cls += (isToggle) ? '_toggle' : '_check';
+                return cls;
+            };
+
+            let cls_native = addMod('checkbox__native', parameters.toggle);
+            let cls_control = addMod('checkbox__control', parameters.toggle);
+
+        input(class=cls_native type='checkbox')&attributes(attrs)
+        span(class=cls_control)

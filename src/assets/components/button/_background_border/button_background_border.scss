@@ -1,6 +1,7 @@
 .button_background_border {
   $border: 0px;
-  color: $color-purple;
+  // color: $color-purple;
+  color: red;
   background: white;
   background-clip: padding-box;
   border: solid $border transparent;

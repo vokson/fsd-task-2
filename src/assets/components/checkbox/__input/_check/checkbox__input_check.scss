@@ -1,0 +1,20 @@
+.checkbox__native_check {
+  width: 20px;
+}
+
+.checkbox__control_check {
+  width: 20px;
+  border-radius: 4px;
+  background-image: url('~@components/checkbox/__input/checked.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0;
+}
+
+.checkbox__native_check:hover + .checkbox__control_check {
+  border-color: $color-purple;
+}
+
+.checkbox__native_check:checked + .checkbox__control_check {
+  background-size: auto;
+}

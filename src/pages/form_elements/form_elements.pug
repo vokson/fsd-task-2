@@ -46,6 +46,20 @@ html(lang='ru')
                         +radio({'name' : 'gender', 'value' : 'male', 'description': 'Мужчина', 'checked': true})(class='block-2__radio-man')
                         +radio({'name' : 'gender', 'value' : 'female', 'description': 'Женщина'})(class='block-2__radio-woman')
 
+                    div(class='block-2__toggles')
+                        +label({'label': 'TOGGLE'})
+
+                        div(class='block-2__toggles-row')
+                            +checkbox({'name' : 'special_order', 'value' : 'on', 'description': 'Получать спецпредложения', 'toggle': true, 'checked': true})(class='block-2__toggle-on')
+                            +checkbox({'name' : 'special_order', 'value' : 'on', 'description': 'Получать спецпредложения', 'toggle': true})(class='block-2__toggle-off')
+
+                    div(class='block-2__like-buttons')
+                        +label({'label': 'LIKE BUTTON'})
+
+                        div(class='block-2__like-buttons-row')
+                            +button({'text': '2', 'shape' : 'circle', 'size' : 's', 'font' : 's', 'border': 'thin', 'icon': 'heart'})(class='block-2__like-off')
+                            +button({'text': '12', 'shape' : 'circle', 'size' : 's', 'font' : 's', 'border': 'thin', 'icon': 'heart'})(class='block-2__like-on')
+
                 div(class='container__block-3 block-3')
                     +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-3__range-slider')
                    

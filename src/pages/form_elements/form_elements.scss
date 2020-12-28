@@ -9,7 +9,6 @@
 @import '@components/checkbox/checkbox.scss';
 @import '@components/radio/radio.scss';
 
-
 .page__logo {
   position: absolute;
   top: 30px;
@@ -19,7 +18,6 @@
 .page__container {
   margin-left: 141px;
   margin-top: 143px;
-  
 }
 
 .container {
@@ -33,7 +31,6 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
-
 
   width: 100%;
   .block-1__focused-textfield,
@@ -112,6 +109,36 @@
       margin-left: 20px;
     }
   }
+
+  .block-2__toggles {
+    margin-top: 37px;
+
+    .block-2__toggles-row {
+      margin-top: 16px;
+
+      .block-2__toggle-off {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  .block-2__like-buttons {
+    margin-top: 43px;
+
+    .block-2__like-buttons-row {
+      display: flex;
+      margin-top: 15px;
+
+      .block-2__like-off {
+        width: 40px;
+      }        
+
+      .block-2__like-on {
+        width: 40px;
+        margin-left: 10px;
+      }
+    }
+  }
 }
 
 .block-3 {
@@ -161,8 +188,7 @@
   .block-3__button-1,
   .block-3__button-2,
   .block-3__button-3,
-  .block-3__button-4
-   {
+  .block-3__button-4 {
     width: 99px;
   }
 
@@ -185,6 +211,6 @@
   }
 
   .block-3__pagination {
-    width: 100%
+    width: 100%;
   }
 }

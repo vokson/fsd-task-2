@@ -8,7 +8,6 @@
 
   .checkbox__native {
     opacity: 0;
-    width: 20px;
     height: 20px;
     box-sizing: border-box;
     padding: 0;
@@ -17,23 +16,15 @@
 
   .checkbox__control {
     display: inline-grid;
-    width: 20px;
     height: 20px;
-    border-radius: 4px;
     border: 1px $color-dark-25 solid;
     box-sizing: border-box;
-    background-image: url('~@components/checkbox/__input/checked.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 0;
-  }
-
-  .checkbox__native:hover + .checkbox__control {
-    border-color: $color-purple;
   }
 
   .checkbox__native:checked + .checkbox__control {
-    background-size: auto;
     border-color: $color-purple;
   }
 }
+
+@import './_check/checkbox__input_check.scss';
+@import './_toggle/checkbox__input_toggle.scss';
