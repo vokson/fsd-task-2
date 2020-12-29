@@ -1,0 +1,14 @@
+.rate {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0;
+    margin: 0;
+    // min-width: 140px;
+    // max-width: 140px;
+    // min-height: 24px;
+    // max-height: 24px;
+    cursor: pointer;
+    user-select: none;
+}
+
+@import '../star/star.scss';

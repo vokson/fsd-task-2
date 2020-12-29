@@ -10,10 +10,10 @@ html(lang='ru')
         include ../../assets/components/textfield/textfield.pug
         include ../../assets/components/buttonfield/buttonfield.pug
         include ../../assets/components/button/button.pug
-        include ../../assets/components/like-button/like-button.pug
         include ../../assets/components/pagination/pagination.pug
         include ../../assets/components/checkbox/checkbox.pug
         include ../../assets/components/radio/radio.pug
+        include ../../assets/components/rate/rate.pug
 
         +logo({'size': 'm'})(class='page__logo')
         
@@ -60,6 +60,13 @@ html(lang='ru')
                         div(class='block-2__like-buttons-row')
                             +button({'text': '2', 'theme': 'like'})(class='block-2__like-off')
                             +button({'text': '12', 'theme': 'like', 'active' : true})(class='block-2__like-on')
+
+                    div(class='block-2__rate-buttons')
+                        +label({'label': 'RATE BUTTON'})
+
+                        div(class='block-2__rate-buttons-row')
+                            +rate({'score': 4, 'total': 5})(class='block-2__rate-left')
+                            +rate({'score': 5, 'total': 5})(class='block-2__rate-right')
 
                 div(class='container__block-3 block-3')
                     +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-3__range-slider')

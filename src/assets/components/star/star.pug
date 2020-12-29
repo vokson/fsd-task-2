@@ -1,0 +1,14 @@
+//- active
+mixin star(parameters)
+    -
+        let classes = ['star'];
+        if (parameters.active) {
+            classes.push('star_active');
+        }
+
+    div(class=classes)&attributes(attributes)
+        include ./__border/star__border.pug
+        include ./__solid/star__solid.pug
+
+        +star__border()
+        +star__solid()

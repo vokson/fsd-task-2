@@ -8,6 +8,7 @@
 @import '@components/pagination/pagination.scss';
 @import '@components/checkbox/checkbox.scss';
 @import '@components/radio/radio.scss';
+@import '@components/rate/rate.scss';
 
 .page__logo {
   position: absolute;
@@ -136,6 +137,24 @@
       .block-2__like-on {
         width: 40px;
         margin-left: 10px;
+      }
+    }
+  }
+
+  .block-2__rate-buttons {
+    margin-top: 38px;
+
+    .block-2__rate-buttons-row {
+      display: flex;
+      margin-top: 15px;
+
+      .block-2__rate-left {
+        width: 120px;
+      }
+
+      .block-2__rate-right {
+        width: 120px;
+        margin-left: 20px;
       }
     }
   }

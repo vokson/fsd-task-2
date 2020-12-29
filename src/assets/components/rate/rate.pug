@@ -1,0 +1,14 @@
+//- score
+//- total
+mixin rate(parameters)
+    div(class='rate' score=(parameters.score) ? parameters.score : 0)&attributes(attributes)
+
+        include ../star/star.pug
+
+        -
+            parameters.score = Math.min(parameters.total, parameters.score)
+            let values  = Array.from({length: parameters.total}, (_, i) => i + 1)
+        
+        each val in values
+            - const isActive = (val <= parameters.score);
+            +star({'active': isActive})(class='rate__star' value=val)
