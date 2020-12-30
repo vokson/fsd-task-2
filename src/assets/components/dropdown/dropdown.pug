@@ -1,0 +1,22 @@
+//- expanded
+//- apply
+//- clean
+//- theme(room|guest)
+//- label
+//- counts
+mixin dropdown(parameters)
+    -
+        let classes = ['dropdown', 'dropdown_theme_' + parameters.theme];
+        if (parameters.expanded) {
+            classes.push('dropdown_expanded')
+        }
+
+    div(class=classes)&attributes(attributes)
+
+        include ./__field/dropdown__field.pug
+        include ./__label/dropdown__label.pug
+        include ./__menu/dropdown__menu.pug
+
+        +dropdown__label({'label': parameters.label})
+        +dropdown__field({'text': '2 спальни, 2 кровати...'})
+        +dropdown__menu(parameters)

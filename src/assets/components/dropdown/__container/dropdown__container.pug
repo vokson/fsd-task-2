@@ -1,0 +1,12 @@
+//- apply
+//- clean
+mixin dropdown__container(parameters)
+    include ../__clean-button/dropdown__clean-button.pug
+    include ../__apply-button/dropdown__apply-button.pug
+
+    div(class='dropdown__container')
+        if parameters.clean
+            +dropdown__clean-button
+        
+        if parameters.apply
+            +dropdown__apply-button

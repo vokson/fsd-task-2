@@ -1,0 +1,32 @@
+.dropdown__field {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+
+    border: 1px $color-dark-25 solid;
+    border-radius: 4px;
+    
+    @include normal-font-style;
+    font-size: 14px;
+    color: $color-dark-75;
+    line-height: 24px;
+
+    padding-left: 13px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+
+    user-select: none;
+}
+
+.dropdown_expanded {
+    .dropdown__field {
+        border-color: $color-dark-50;
+        border-radius: 4px 4px 0 0;
+    }
+}
+
+.dropdown__field::before {
+    content: attr(value);
+}
+
+@import '../__icon/dropdown__icon.scss';

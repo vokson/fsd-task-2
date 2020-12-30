@@ -1,0 +1,22 @@
+//- apply
+//- clean
+//- theme(room|guest)
+//- counts
+mixin dropdown__menu(parameters)
+    -
+        const arr = (parameters.theme == 'room')
+            ? ['спальни', 'кровати', 'ванные комнаты']
+            : ['взрослые', 'дети', 'младенцы'];
+
+    include ../__container/dropdown__container.pug
+    include ../__row/dropdown__row.pug
+
+
+    div(class='dropdown__menu')
+        each index in [0, 1, 2]
+            +dropdown__row({'text': arr[index], 'count': parameters.counts[index]})
+
+        +dropdown__container({
+            'apply': parameters.apply,
+            'clean': parameters.clean
+        })

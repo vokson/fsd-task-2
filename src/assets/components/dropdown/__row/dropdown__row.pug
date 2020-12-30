@@ -1,0 +1,18 @@
+//- text
+//- count
+mixin dropdown__row(parameters)
+    include ../__item-text/dropdown__item-text
+    include ../__item-value/dropdown__item-value
+    include ../__button/dropdown__button
+
+    div(class='dropdown__row')
+        +dropdown__item-text({'text': parameters.text})
+
+        if parameters.count <= 0
+            +dropdown__button({'type': 'substract', 'disabled': true})
+        else
+            +dropdown__button({'type': 'substract'})
+
+        +dropdown__item-value({'count': parameters.count})
+        +dropdown__button({'type': 'add'})
+        

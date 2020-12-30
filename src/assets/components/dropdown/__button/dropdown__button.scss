@@ -1,0 +1,23 @@
+.dropdown__button {
+    display: block;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+
+    outline: none;
+    border: 1px $color-dark-50 solid;
+    border-radius: 15px;
+
+    @include normal-font-style;
+    font-size: 18px;
+    color: $color-dark-50;
+    text-align: center;
+   
+    cursor: pointer;
+
+    margin: 0;
+
+    background-color: white;
+}
+
+@import './_disabled/dropdown__button_disabled.scss';

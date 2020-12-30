@@ -2,8 +2,8 @@
 //- placeholder: placeholder
 //- value: text inside input
 //- Modificators:
-//- icon_(expand|arrow)
-//- bottom_flat
+//- icon: (expand|arrow)
+//- bottom: (flat)
 //- disabled
 
 mixin buttonfield(parameters)
@@ -16,11 +16,11 @@ mixin buttonfield(parameters)
             let inputParams = {
                 'placeholder': parameters.placeholder,
                 'value': parameters.value,
-                'disabled': parameters.disabled
+                'disabled': parameters.disabled,
             }
 
             let buttonParams = {
-                'icon': parameters.icon
+                'icon': parameters.icon,
             }
 
             if (parameters.bottom == 'flat') {

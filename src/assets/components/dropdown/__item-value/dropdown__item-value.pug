@@ -1,0 +1,5 @@
+//- text
+//- count
+mixin dropdown__item-value(parameters)
+    include ../../label/label.pug
+    +label({'label': parameters.count})(class='dropdown__item-value')

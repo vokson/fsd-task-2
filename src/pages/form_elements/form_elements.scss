@@ -9,6 +9,7 @@
 @import '@components/checkbox/checkbox.scss';
 @import '@components/radio/radio.scss';
 @import '@components/rate/rate.scss';
+@import '@components/dropdown/dropdown.scss';
 
 .page__logo {
   position: absolute;
@@ -24,14 +25,16 @@
 .container {
   display: grid;
   grid-template-columns: 320px 126px 260px 132px 320px;
-  grid-template-rows: 736px 688px 158x;
+  // grid-template-rows: 736px 688px 158x;
 }
 
-.block-1 {
+.container__block-1 {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+
+  height: 733px;
 
   width: 100%;
   .block-1__focused-textfield,
@@ -73,7 +76,7 @@
   }
 }
 
-.block-2 {
+.container__block-2 {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -160,7 +163,7 @@
   }
 }
 
-.block-3 {
+.container__block-3 {
   grid-column-start: 5;
   grid-column-end: 6;
   grid-row-start: 1;
@@ -231,5 +234,23 @@
 
   .block-3__pagination {
     width: 100%;
+  }
+}
+
+.container__block-4 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  width: 100%;
+
+  .block-4__dropdown-close {
+    width: 266px;
+  }
+
+  .block-4__dropdown-open {
+    margin-top: 20px;
+    width: 266px;
   }
 }

@@ -1,0 +1,14 @@
+.dropdown__row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    height: 30px;
+    margin-top: 5px;
+    margin-bottom: 2px;
+
+}
+
+@import '../__item-text/dropdown__item-text.scss';
+@import '../__item-value/dropdown__item-value.scss';
+@import '../__button/dropdown__button.scss';

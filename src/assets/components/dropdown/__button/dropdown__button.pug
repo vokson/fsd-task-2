@@ -1,0 +1,23 @@
+//- type: (add|substract)
+//- disabled
+mixin dropdown__button(parameters)
+    -
+        let classes = ['dropdown__button']
+        let text = '';
+
+        if (parameters.type == 'add') {
+            classes.push('dropdown__button_add');
+            text = '+';
+
+        }
+
+        if (parameters.type == 'substract') {
+            classes.push('dropdown__button_substract');
+            text = '-';
+        }
+
+        if (parameters.disabled) {
+            classes.push('dropdown__button_disabled');
+        }
+
+    input(class=classes type='button' value=text)
