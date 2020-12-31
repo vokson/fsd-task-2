@@ -92,10 +92,6 @@ Array.from(buttons).forEach((e) => {
         : 'Сделайте выбор ...';
     }
 
-    if (description.length > 20) {
-      description = description.substring(0, 20) + '...';
-    }
-
     const field = dropdown.getElementsByClassName('dropdown__field')[0];
     field.setAttribute('value', description);
   };

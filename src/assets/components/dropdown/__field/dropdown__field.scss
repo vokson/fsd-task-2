@@ -14,8 +14,13 @@
     padding-left: 13px;
     padding-top: 8px;
     padding-bottom: 10px;
+    padding-right: 40px;;
 
     user-select: none;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .dropdown_expanded {
