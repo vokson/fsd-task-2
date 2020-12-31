@@ -15,6 +15,7 @@ html(lang='ru')
         include ../../assets/components/radio/radio.pug
         include ../../assets/components/rate/rate.pug
         include ../../assets/components/dropdown/dropdown.pug
+        include ../../assets/components/expand-checkbox/expand-checkbox.pug
 
         +logo({'size': 'm'})(class='page__logo')
         
@@ -98,6 +99,9 @@ html(lang='ru')
                 div(class='container__block-4 block-4')
                     +dropdown({'theme': 'room', 'counts': [2,2,0], 'text': '2 спальни, 2 кровати...', 'label': 'DROPDOWN'})(class='block-4__dropdown-close')
                     +dropdown({'theme': 'room', 'counts': [2,2,0], 'text': '2 спальни, 2 кровати...', 'label': 'DROPDOWN', 'expanded': true})(class='block-4__dropdown-open')
+
+                    +expand-checkbox({'label': 'EXPANDABLE CHECKBOX LIST'})(class='block-4__expand-checkbox-close')
+                    +expand-checkbox({'label': 'EXPANDABLE CHECKBOX LIST', 'expanded': true})(class='block-4__expand-checkbox-open')
 
 
                 div(class='container__block-5 block-5')

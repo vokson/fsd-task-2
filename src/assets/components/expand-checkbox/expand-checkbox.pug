@@ -1,0 +1,16 @@
+//- label
+//- expanded
+mixin expand-checkbox(parameters)
+    -
+        let classes = ['expand-checkbox'];
+        if (parameters.expanded) {
+            classes.push('expand-checkbox_expanded')
+        }
+
+    div(class=classes)&attributes(attributes)
+
+        include ./__container/expand-checkbox__container.pug
+        include ./__list/expand-checkbox__list.pug
+
+        +expand-checkbox__container(parameters)
+        +expand-checkbox__list

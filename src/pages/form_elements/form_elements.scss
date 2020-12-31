@@ -10,6 +10,7 @@
 @import '@components/radio/radio.scss';
 @import '@components/rate/rate.scss';
 @import '@components/dropdown/dropdown.scss';
+@import '@components/expand-checkbox/expand-checkbox.scss';
 
 .page__logo {
   position: absolute;
@@ -250,6 +251,16 @@
   }
 
   .block-4__dropdown-open {
+    margin-top: 20px;
+    width: 266px;
+  }
+
+  .block-4__expand-checkbox-close {
+    margin-top: 40px;
+    width: 266px;
+  }
+
+  .block-4__expand-checkbox-open {
     margin-top: 20px;
     width: 266px;
   }

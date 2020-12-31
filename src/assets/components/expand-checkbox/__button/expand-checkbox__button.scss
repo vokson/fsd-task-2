@@ -1,0 +1,16 @@
+.expand-checkbox__button {
+  display: block;
+  margin-left: auto;
+  margin-right: 10px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.expand-checkbox_expanded {
+  .expand-checkbox__container {
+    .expand-checkbox__button {
+      transform: rotate(180deg);
+    }
+  }
+}

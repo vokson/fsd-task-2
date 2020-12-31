@@ -1,0 +1,9 @@
+.expand-checkbox__container {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    height: 44px;
+}
+
+@import '../__button/expand-checkbox__button.scss';
+@import '../__label/expand-checkbox__label.scss';

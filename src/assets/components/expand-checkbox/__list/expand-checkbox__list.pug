@@ -1,0 +1,10 @@
+mixin expand-checkbox__list
+    include ../__list-item/expand-checkbox__list-item.pug
+
+    div(class='expand-checkbox__list')
+        +expand-checkbox__list-item({'value': 'breakfast', 'description': 'Завтрак'})
+        +expand-checkbox__list-item({'value': 'table', 'description': 'Письменный стол', 'checked': true})
+        +expand-checkbox__list-item({'value': 'chair', 'description': 'Стул для кормления', 'checked': true})
+        +expand-checkbox__list-item({'value': 'bed', 'description': 'Кроватка', 'checked': true})
+        +expand-checkbox__list-item({'value': 'tv', 'description': 'Телевизор'})
+        +expand-checkbox__list-item({'value': 'shampoo', 'description': 'Шампунь'})

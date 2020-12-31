@@ -1,0 +1,9 @@
+//- label
+//- expanded
+mixin expand-checkbox__container(parameters)
+    include ../__label/expand-checkbox__label.pug
+    include ../__button/expand-checkbox__button.pug
+    
+    div(class='expand-checkbox__container')
+        +expand-checkbox__label({'label': parameters.label})
+        +expand-checkbox__button({'expanded': parameters.expanded})

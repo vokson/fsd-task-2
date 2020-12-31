@@ -1,0 +1,16 @@
+//- value
+//- description
+//- checked
+mixin expand-checkbox__list-item(parameters)
+    include ../../checkbox/checkbox.pug
+
+    -
+        let params = {
+            'name': 'accommodations',
+            'value': parameters.value,
+            'font': 'm',
+            'description': parameters.description,
+            'checked': parameters.checked
+        }
+
+    +checkbox(params)(class='expand-checkbox__list-item')

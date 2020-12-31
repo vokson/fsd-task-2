@@ -1,0 +1,9 @@
+//- expanded
+mixin expand-checkbox__button(parameters)
+    -
+        let classes = ['material-icons', 'expand-checkbox__button'];
+        if (parameters.expanded) {
+            classes.push('expand-checkbox_button_expanded');
+        }
+
+    i(class=classes) expand_more

@@ -1,0 +1,10 @@
+.expand-checkbox__list {
+}
+
+.expand-checkbox:not(.expand-checkbox_expanded) {
+  .expand-checkbox__list {
+      display: none;
+  }
+}
+
+@import '../__list-item/expand-checkbox__list-item.scss';
