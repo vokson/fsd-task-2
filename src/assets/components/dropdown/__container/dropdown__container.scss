@@ -1,5 +1,7 @@
 .dropdown__container {
     display: flex;
+    padding-top: 19px;
+    padding-bottom: 6px;
 }
 
 @import '../__apply-button/dropdown__apply-button.scss';

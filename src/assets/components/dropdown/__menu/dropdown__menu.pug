@@ -16,7 +16,8 @@ mixin dropdown__menu(parameters)
         each index in [0, 1, 2]
             +dropdown__row({'text': arr[index], 'count': parameters.counts[index]})
 
-        +dropdown__container({
-            'apply': parameters.apply,
-            'clean': parameters.clean
-        })
+        if parameters.apply || parameters.clean
+            +dropdown__container({
+                'apply': parameters.apply,
+                'clean': parameters.clean
+            })

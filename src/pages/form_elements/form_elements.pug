@@ -38,9 +38,9 @@ html(lang='ru')
                     
                     div(class='block-2__checkbox-buttons')
                         +label({'label': 'CHECKBOX BUTTONS'})
-                        +checkbox({'name' : 'allowed', 'value' : 'smoke', 'description': 'Можно курить', 'font': 'm'})(class='block-2__checkbox-1')
-                        +checkbox({'name' : 'allowed', 'value' : 'pets', 'description': 'Можно с питомцами', 'font': 'm', 'checked': true})(class='block-2__checkbox-2')
-                        +checkbox({'name' : 'allowed', 'value' : 'guests', 'description': 'Можно пригласить гостей (до 10 человек)', 'font': 'm', 'checked': true})(class='block-2__checkbox-3')
+                        +checkbox({'name' : 'allowed', 'value' : 'smoke', 'description': 'Можно курить'})(class='block-2__checkbox-1')
+                        +checkbox({'name' : 'allowed', 'value' : 'pets', 'description': 'Можно с питомцами', 'checked': true})(class='block-2__checkbox-2')
+                        +checkbox({'name' : 'allowed', 'value' : 'guests', 'description': 'Можно пригласить гостей (до 10 человек)', 'checked': true})(class='block-2__checkbox-3')
 
                     div(class='block-2__radio-buttons')
                         +label({'label': 'RADIO BUTTONS'})
@@ -105,5 +105,9 @@ html(lang='ru')
 
 
                 div(class='container__block-5 block-5')
+                    +dropdown({'theme': 'guest', 'counts': [0,0,0], 'label': 'DROPDOWN', 'expanded': true, 'apply': true})(class='block-5__dropdown')
+
                 div(class='container__block-6 block-6')
+                    +dropdown({'theme': 'guest', 'counts': [2,1,0], 'label': 'DROPDOWN', 'expanded': true, 'apply': true, 'clean': true})(class='block-6__dropdown')
+
                 div(class='container__block-7 block-7')
