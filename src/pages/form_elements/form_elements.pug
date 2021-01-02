@@ -107,6 +107,11 @@ html(lang='ru')
                 div(class='container__block-5 block-5')
                     +dropdown({'theme': 'guest', 'counts': [0,0,0], 'label': 'DROPDOWN', 'expanded': true, 'apply': true})(class='block-5__dropdown')
 
+                    div(class='block-5__rich-checkbox-buttons')
+                        +label({'label': 'RICH CHECKBOX BUTTONS'})
+                        +checkbox({'name' : 'accessibility', 'value' : 'wide_corridor', 'description': 'Ширина коридоров в номере не менее 91 см.', 'caption': 'Широкий коридор'})(class='block-5__checkbox-1')
+                        +checkbox({'name' : 'accessibility', 'value' : 'invalid_helper', 'description': 'На 1 этаже вас встретит специалист  и проводит до номера.', 'caption': 'Помощник для инвалидов'})(class='block-5__checkbox-2')
+
                 div(class='container__block-6 block-6')
                     +dropdown({'theme': 'guest', 'counts': [2,1,0], 'label': 'DROPDOWN', 'expanded': true, 'apply': true, 'clean': true})(class='block-6__dropdown')
 
