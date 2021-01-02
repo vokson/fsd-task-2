@@ -1,0 +1,7 @@
+//- items
+mixin bullet-list(parameters)
+    ul(class='bullet-list')&attributes(attributes)
+        include ./__item/bullet-list__item.pug
+
+        each text in parameters.items
+            +bullet-list__item({'text': text})

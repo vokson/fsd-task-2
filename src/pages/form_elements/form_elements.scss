@@ -11,6 +11,7 @@
 @import '@components/rate/rate.scss';
 @import '@components/dropdown/dropdown.scss';
 @import '@components/expand-checkbox/expand-checkbox.scss';
+@import '@components/bullet-list/bullet-list.scss';
 
 .page__logo {
   position: absolute;
@@ -136,7 +137,7 @@
 
       .block-2__like-off {
         width: 40px;
-      }        
+      }
 
       .block-2__like-on {
         width: 40px;
@@ -264,10 +265,7 @@
     margin-top: 20px;
     width: 266px;
   }
-
-  
 }
-
 
 .container__block-5 {
   grid-column-start: 3;
@@ -283,17 +281,16 @@
 
   .block-5__rich-checkbox-buttons {
     margin-top: 97px;
-    
-  }
 
-  .block-5__checkbox-1 {
-    margin-top: 16px;
-    width: 230px;
-  }
+    .block-5__checkbox-1 {
+      margin-top: 16px;
+      width: 230px;
+    }
 
-  .block-5__checkbox-2 {
-    margin-top: 11px;
-    width: 260px;
+    .block-5__checkbox-2 {
+      margin-top: 11px;
+      width: 260px;
+    }
   }
 }
 
@@ -307,5 +304,14 @@
 
   .block-6__dropdown {
     width: 320px;
+  }
+
+  .block-6__list-block {
+    margin-top: 97px;
+
+    .block-6__bullet-list {
+      margin-top: 12px;
+      width: 260px;
+    }
   }
 }
