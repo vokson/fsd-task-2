@@ -1,0 +1,9 @@
+//- user
+//- days_ago
+mixin feedback__container(parameters)
+    include ../__name/feedback__name.pug
+    include ../__date/feedback__date.pug
+
+    div(class='feedback__container')
+        +feedback__name({'user': parameters.user})
+        +feedback__date({'days_ago': parameters.days_ago})

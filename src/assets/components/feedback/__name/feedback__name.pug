@@ -1,0 +1,10 @@
+//- user
+mixin feedback__name(parameters)
+    case parameters.user
+        when 'murad'
+            p(class='feedback__name') Мурад Сарафанов
+        when 'patricia'
+            p(class='feedback__name') Патрисия Стеклышкова
+        default
+            p(class='feedback__name') Неизвестный Пользователь
+        

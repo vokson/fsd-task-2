@@ -17,6 +17,8 @@ html(lang='ru')
         include ../../assets/components/dropdown/dropdown.pug
         include ../../assets/components/expand-checkbox/expand-checkbox.pug
         include ../../assets/components/bullet-list/bullet-list.pug
+        include ../../assets/components/feedback/feedback.pug
+
 
         +logo({'size': 'm'})(class='page__logo')
         
@@ -125,3 +127,12 @@ html(lang='ru')
                         ]})(class='block-6__bullet-list')
 
                 div(class='container__block-7 block-7')
+
+                div(class='container__block-8 block-8')
+                    +feedback({
+                        'user': 'murad',
+                        'days_ago': 5,
+                        'likes': 12,
+                        'active': true,
+                        'text': 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                    })

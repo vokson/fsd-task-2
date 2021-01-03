@@ -1,0 +1,10 @@
+//- likes
+//- active
+
+mixin feedback__like(parameters)
+    include ../../button/button.pug
+    +button({
+        'text': parameters.likes,
+        'theme': 'like',
+        'active' : parameters.active
+    })(class='feedback__like')

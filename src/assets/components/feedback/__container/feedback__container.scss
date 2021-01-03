@@ -1,0 +1,8 @@
+.feedback__container {
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-dark-75;
+}
+
+@import '../__name/feedback__name.scss';
+@import '../__date/feedback__date.scss';

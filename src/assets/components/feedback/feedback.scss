@@ -1,0 +1,12 @@
+.feedback {
+    display: grid;
+    grid-template-columns: 48px auto;
+    grid-template-rows: 48px auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+@import './__photo/feedback__photo.scss';
+@import './__container/feedback__container.scss';
+@import './__like/feedback__like.scss';
+@import './__text/feedback__text.scss';

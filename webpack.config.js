@@ -146,6 +146,7 @@ module.exports = {
       '@styles': path.resolve(__dirname, 'src/styles'),
       '@components': path.resolve(__dirname, 'src/assets/components'),
       '@fonts': path.resolve(__dirname, 'src/assets/fonts'),
+      '@avatars': path.resolve(__dirname, 'src/assets/images/avatars'),
       '@': path.resolve(__dirname, 'src'),
     },
   },
@@ -172,7 +173,10 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|svg|gif|ico)$/,
-        use: ['file-loader'],
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        }
       },
       {
         test: /\.(ttf|woff|woff2|eot|otf)$/,

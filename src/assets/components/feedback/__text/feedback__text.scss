@@ -1,0 +1,6 @@
+.feedback__text {
+    @include normal-font-style;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-dark-75;
+}

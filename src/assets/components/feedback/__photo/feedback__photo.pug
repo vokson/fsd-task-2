@@ -1,0 +1,5 @@
+//- user
+mixin feedback__photo(parameters)
+    - const img = require('@avatars/'+ parameters.user+'.png')
+    //- div(class='feedback__photo' user=parameters.user)
+    img(class='feedback__photo' src=img.default)

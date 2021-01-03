@@ -1,0 +1,17 @@
+//- user
+//- days_ago
+//- likes
+//- active
+//- text
+
+mixin feedback(parameters)
+    include ./__photo/feedback__photo.pug
+    include ./__container/feedback__container.pug
+    include ./__like/feedback__like.pug
+    include ./__text/feedback__text.pug
+    
+    div(class='feedback')&attributes(attributes)
+        +feedback__photo({'user': parameters.user})
+        +feedback__container({'user': parameters.user, 'days_ago': parameters.days_ago})
+        +feedback__like({'likes': parameters.likes, 'active': parameters.active})
+        +feedback__text({'text': parameters.text})
