@@ -1,0 +1,11 @@
+.tip__container {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-dark-75;
+}
+
+@import '../__caption/tip__caption.scss';
+@import '../__description/tip__description.scss';

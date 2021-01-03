@@ -1,0 +1,19 @@
+//- icon
+mixin tip__icon(parameters)
+    -
+        let iconName = '';
+        switch (parameters.icon) {
+            case 'smile':
+                iconName = 'insert_emoticon';
+                break;
+
+            case 'house':
+                iconName = 'location_city';
+                break;
+
+            case 'flame':
+                iconName = 'whatshot';
+                break;
+        }
+
+    i(class='material-icons tip__icon')= iconName

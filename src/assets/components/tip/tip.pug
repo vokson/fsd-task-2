@@ -1,0 +1,21 @@
+//- icon
+//- caption
+//- description
+//- underline
+
+mixin tip(parameters)
+    -
+        let classes = ['tip']
+        if (parameters.underline) {
+            classes.push('tip_underline')
+        }
+
+    div(class=classes)&attributes(attributes)
+        include ./__icon/tip__icon.pug
+        include ./__container/tip__container.pug
+        
+        +tip__icon({'icon': parameters.icon})
+        +tip__container({
+            'caption': parameters.caption,
+            'description': parameters.description
+        })

@@ -1,0 +1,11 @@
+.tip {
+    height: 48px;
+    display: flex;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@import './__icon/tip__icon.scss';
+@import './__container/tip__container.scss';
+@import './_underline/tip_underline.scss';

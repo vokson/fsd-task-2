@@ -13,6 +13,7 @@
 @import '@components/expand-checkbox/expand-checkbox.scss';
 @import '@components/bullet-list/bullet-list.scss';
 @import '@components/feedback/feedback.scss';
+@import '@components/tip/tip.scss';
 
 .page__logo {
   position: absolute;
@@ -247,7 +248,7 @@
   grid-row-end: 3;
 
   width: 100%;
-  height: 697px;
+  height: 668px;
 
   .block-4__dropdown-close {
     width: 266px;
@@ -318,6 +319,24 @@
   }
 }
 
+.container__block-7 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+  width: 100%;
+
+
+  display: flex;
+  flex-direction: column;
+
+  .block-7__tip-1,
+  .block-7__tip-2 {
+    width: 280px;
+  }
+}
+
 
 .container__block-8 {
   grid-column-start: 3;
@@ -326,4 +345,7 @@
   grid-row-end: 4;
 
   width: 100%;
+  margin-top: 30px;
+
+  
 }

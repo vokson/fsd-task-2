@@ -18,6 +18,7 @@ html(lang='ru')
         include ../../assets/components/expand-checkbox/expand-checkbox.pug
         include ../../assets/components/bullet-list/bullet-list.pug
         include ../../assets/components/feedback/feedback.pug
+        include ../../assets/components/tip/tip.pug
 
 
         +logo({'size': 'm'})(class='page__logo')
@@ -127,6 +128,8 @@ html(lang='ru')
                         ]})(class='block-6__bullet-list')
 
                 div(class='container__block-7 block-7')
+                    +tip({'icon': 'smile', 'caption': 'Комфорт', 'description': 'Шумопоглощающие стены', 'underline': true})(class='block-7__tip-1')
+                    +tip({'icon': 'house', 'caption': 'Удобство', 'description': 'Окно в каждой из спален', 'underline': true})(class='block-7__tip-2')
 
                 div(class='container__block-8 block-8')
                     +feedback({

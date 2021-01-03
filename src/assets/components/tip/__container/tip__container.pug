@@ -1,0 +1,9 @@
+//- caption
+//- description
+mixin tip__container(parameters)
+    include ../__caption/tip__caption.pug
+    include ../__description/tip__description.pug
+
+    div(class='tip__container')
+        +tip__caption({'caption': parameters.caption})
+        +tip__description({'description': parameters.description})
