@@ -1,0 +1,8 @@
+//- label
+mixin slider(parameters)
+    div(class='slider')&attributes(attributes)
+        include ./__line-container/slider__line-container.pug
+        include ./__container/slider__container.pug
+
+        +slider__container({'label': parameters.label})
+        +slider__line-container()

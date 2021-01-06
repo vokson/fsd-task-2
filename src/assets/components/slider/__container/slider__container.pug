@@ -1,0 +1,8 @@
+//- label
+mixin slider__container(parameters)
+    div(class='slider__container')
+        include ../__label/slider__label.pug
+        include ../__range/slider__range.pug
+        
+        +slider__label({'label': parameters.label})
+        +slider__range()

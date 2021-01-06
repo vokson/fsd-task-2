@@ -1,0 +1,7 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+}
+
+@import './__line-container/slider__line-container.scss';
+@import './__container/slider__container.scss';

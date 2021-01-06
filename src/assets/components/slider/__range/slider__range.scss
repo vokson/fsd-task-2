@@ -1,0 +1,7 @@
+.slider__range {
+    @include normal-font-style;
+    font-size: 12px;
+    line-height: 14px;
+    color: $color-dark-50;
+    margin-left: auto;
+}

@@ -19,6 +19,7 @@ html(lang='ru')
         include ../../assets/components/bullet-list/bullet-list.pug
         include ../../assets/components/feedback/feedback.pug
         include ../../assets/components/tip/tip.pug
+        include ../../assets/components/slider/slider.pug
 
 
         +logo({'size': 'm'})(class='page__logo')
@@ -75,7 +76,7 @@ html(lang='ru')
                             +rate({'score': 5, 'total': 5})(class='block-2__rate-right')
 
                 div(class='container__block-3 block-3')
-                    +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-3__range-slider')
+                    +slider({'label': 'RANGE SLIDER'})(class='block-3__range-slider')
                    
                     div(class='block-3__buttons')
                         +label({'label': 'BUTTONS'})

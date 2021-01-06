@@ -14,6 +14,7 @@
 @import '@components/bullet-list/bullet-list.scss';
 @import '@components/feedback/feedback.scss';
 @import '@components/tip/tip.scss';
+@import '@components/slider/slider.scss';
 
 .page__logo {
   position: absolute;
@@ -177,10 +178,11 @@
 
   .block-3__range-slider {
     margin-top: 0px;
+    width: 266px;
   }
 
   .block-3__buttons {
-    margin-top: 22px;
+    margin-top: 42px;
   }
 
   .block-3__button-row-1,
