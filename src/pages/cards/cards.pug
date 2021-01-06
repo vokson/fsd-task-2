@@ -1,0 +1,19 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=1440, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0')
+        link(rel='icon' sizes='16x16 32x32 48x48' href='favicon.ico')
+    body
+        include ../../assets/components/logo/logo.pug
+        include ../../assets/components/calendar/calendar.pug
+
+
+        +logo({'size': 'm'})(class='page__logo')
+        
+        div(class='page')
+            div(class='page__container container')
+                div(class='container__block-1 block-1')
+                div(class='container__block-2 block-2')
+                div(class='container__block-3 block-3')
+                    +calendar({})(class='block-3__calendar')

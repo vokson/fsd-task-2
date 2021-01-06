@@ -88,21 +88,23 @@ const plugins = () => {
         collapseWhitespace: isProd,
       },
     }),
-    // new HTMLWebpackPlugin({
-    //   template: './pages/header_footer/header_footer.pug',
-    //   filename: './index.html',
-    //   minify: {
-    //         collapseWhitespace: isProd
-    //       }
-    // }),
+
+    new HTMLWebpackPlugin({
+      template: './pages/cards/cards.pug',
+      filename: './index.html',
+      minify: {
+            collapseWhitespace: isProd
+          }
+    }),
 
     new HTMLWebpackPlugin({
       template: './pages/form_elements/form_elements.pug',
-      filename: './index.html',
+      filename: './form_elements.html',
       minify: {
         collapseWhitespace: isProd,
       },
     }),
+
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
@@ -127,13 +129,18 @@ module.exports = {
   mode: 'development',
   entry: {
     color_type: ['./pages/color_type/color_type.scss'],
-    // header_footer: ['@babel/polyfill', './pages/header_footer/header_footer.js', './pages/header_footer/header_footer.scss'],
+
     form_elements: [
       '@babel/polyfill',
       './pages/form_elements/form_elements.js',
       './pages/form_elements/form_elements.scss',
     ],
-    // form_elements: ['@babel/polyfill', './pages/form_elements/form_elements.js']
+    
+    cards: [
+      '@babel/polyfill',
+      './pages/cards/cards.js',
+      './pages/cards/cards.scss',
+    ]
   },
   output: {
     filename: filename('js'),

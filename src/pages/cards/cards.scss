@@ -1,0 +1,62 @@
+@import '@styles/zero-style.scss';
+@import '@styles/global-vars.scss';
+
+@import '@components/logo/logo.scss';
+@import '@components/calendar/calendar.scss';
+
+body {
+  background: #F4F4F6;
+}
+
+.page__logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.page__container {
+  margin-left: 140px;
+  margin-top: 150px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 380px 380px 320px;
+  column-gap: 40px;
+}
+
+.container__block-1 {
+  display: flex;
+  flex-direction: column;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+}
+
+.container__block-2 {
+  display: flex;
+  flex-direction: column;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.container__block-3 {
+  display: flex;
+  flex-direction: column;
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.block-3__calendar {
+  width: 100%;
+
+}
