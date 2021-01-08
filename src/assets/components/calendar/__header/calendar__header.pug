@@ -1,0 +1,10 @@
+mixin calendar__header(parameters)
+    div(class='calendar__header')
+
+        include ../__prev/calendar__prev.pug
+        include ../__next/calendar__next.pug
+        include ../__caption/calendar__caption.pug
+
+        +calendar__prev()
+        +calendar__caption()
+        +calendar__next()

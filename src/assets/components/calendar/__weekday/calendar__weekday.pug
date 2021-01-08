@@ -1,0 +1,5 @@
+//- weekday: (int) - 1..7 = Mo .. Su
+mixin calendar__weekday(parameters)
+    -
+        const days = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+    p(class='calendar__weekday')= days[parameters.weekday-1]

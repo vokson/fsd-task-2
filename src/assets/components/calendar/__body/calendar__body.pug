@@ -1,0 +1,7 @@
+mixin calendar__body(parameters)
+    div(class='calendar__body')
+        include ../__weekday-container/calendar__weekday-container.pug
+        include ../__day-container/calendar__day-container.pug
+        
+        +calendar__weekday-container()
+        +calendar__day-container()

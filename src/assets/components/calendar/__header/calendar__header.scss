@@ -1,0 +1,8 @@
+.calendar__header {
+    display: flex;
+    width: 100%;
+}
+
+@import '../__prev/calendar__prev.scss';
+@import '../__next/calendar__next.scss';
+@import '../__caption/calendar__caption.scss';

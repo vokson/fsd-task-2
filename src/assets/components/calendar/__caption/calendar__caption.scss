@@ -1,0 +1,6 @@
+.calendar__caption {
+    @include bold-font-style;
+    font-size: 19px;
+    line-height: 24px;
+    color: $color-dark-100;
+}

@@ -1,0 +1,8 @@
+.calendar__day {
+    @include normal-font-style;
+    font-size: 12px;
+    text-align: center;
+    align-self: center;
+    color: $color-dark-50;
+
+}

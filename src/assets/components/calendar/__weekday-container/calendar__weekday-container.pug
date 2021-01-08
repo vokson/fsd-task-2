@@ -1,0 +1,6 @@
+mixin calendar__weekday-container
+    include ../__weekday/calendar__weekday.pug
+    
+    div(class='calendar__weekday-container')
+        each idx in Array.from({length: 7}, (_, i) => i + 1)
+            +calendar__weekday({'weekday': idx})

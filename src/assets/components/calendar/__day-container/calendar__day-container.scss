@@ -1,0 +1,9 @@
+.calendar__day-container {
+    display: grid;
+    min-width: 140px;
+    min-height: 100px;
+    height: 200px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+@import '../__day/calendar__day.scss';

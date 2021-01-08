@@ -1,4 +1,29 @@
-//- 
+//- active: (true|false)
+//- year: (int) - year to show
+//- month: (int) - month to show
+//- currentDate: (string) - in format XX.XX.XXXX
+//- startDate: (string) - in format XX.XX.XXXX
+//- endDate: (string) - in format XX.XX.XXXX
 mixin calendar(parameters)
-    div(class='calendar')&attributes(attributes)
-        input(class='calendar__container')
+    -
+        let classes = ['calendar'];
+        if (parameters.active) {
+            classes.push('calendar_active')
+        }
+
+    div(
+        class=classes
+        month=parameters.month
+        year=parameters.year
+        current-date=parameters.currentDate
+        start-date=parameters.startDate
+        end-date=parameters.endDate
+    )&attributes(attributes)
+
+        include ./__body/calendar__body.pug
+        include ./__footer/calendar__footer.pug
+        include ./__header/calendar__header.pug
+
+        +calendar__header({})
+        +calendar__body({})
+        +calendar__footer({})

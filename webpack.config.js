@@ -131,7 +131,7 @@ module.exports = {
     color_type: ['./pages/color_type/color_type.scss'],
 
     form_elements: [
-      '@babel/polyfill',
+      // '@babel/polyfill',
       './pages/form_elements/form_elements.js',
       './pages/form_elements/form_elements.scss',
     ],

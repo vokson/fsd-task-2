@@ -1,5 +1,21 @@
-// @import '/calendar-dhx.css';
-// @import '~dhx-calendar/codebase/calendar.min.css';
-// @import '~nouislider/distribute/nouislider.css';
+.calendar {
+    display: none;
 
-@import '~flatpickr';
+    width: 100%;
+    padding: 20px;
+    padding-top: 19px;
+    box-sizing: border-box;
+
+    background-color: white;
+    border: 1px $color-dark-25 solid;
+    border-radius: 4px;
+    box-shadow: 0px 10px 20px $color-dark-5;
+}
+
+// @import './custom.scss';
+// @import '~shortcut-buttons-flatpickr';
+
+@import './__header/calendar__header.scss';
+@import './__body/calendar__body.scss';
+@import './__footer/calendar__footer.scss';
+@import './_active/calendar_active.scss';
