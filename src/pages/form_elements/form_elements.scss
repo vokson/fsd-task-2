@@ -30,7 +30,6 @@
 .container {
   display: grid;
   grid-template-columns: 320px 126px 260px 132px 320px;
-  // grid-template-rows: 736px 688px 158x;
 }
 
 .container__block-1 {
@@ -43,7 +42,7 @@
 
   width: 100%;
   .block-1__focused-textfield,
-  .block-1__guest-buttonfield {
+  .block-1__guest-dropdown {
     margin-top: 20px;
   }
 

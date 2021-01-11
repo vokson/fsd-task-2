@@ -1,0 +1,9 @@
+mixin room-form__guests
+    include ../../dropdown/dropdown.pug
+    +dropdown({
+        'theme': 'guest',
+        'counts': [0,0,0],
+        'label': 'ГОСТИ',
+        'expanded': false,
+        'apply': true
+    })(class='room-form__guests')

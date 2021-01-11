@@ -1,8 +1,27 @@
 .calendar__day {
     @include normal-font-style;
     font-size: 12px;
-    text-align: center;
-    align-self: center;
-    color: $color-dark-50;
+    color: $color-dark-25;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self:center;
+
+    cursor: pointer;
 }
+
+.calendar__day:hover {
+    color: red;
+}
+
+@import './_in-this-month/calendar__day_in-this-month.scss';
+@import './_not-required/calendar__day_not-required.scss';
+@import './_current-day/calendar__day_current-day.scss';
+@import './_between-day/calendar__day_between-day.scss';
+@import './_edge-day/calendar__day_edge-day.scss';
+@import './_start-day/calendar__day_start-day.scss';
+@import './_end-day/calendar__day_end-day.scss';
+@import './_size_m/calendar__day_size_m.scss';
+@import './_size_s/calendar__day_size_s.scss';

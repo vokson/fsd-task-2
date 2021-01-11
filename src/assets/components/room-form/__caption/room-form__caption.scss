@@ -1,0 +1,8 @@
+.room-form__caption {
+    @include bold-font-style;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+@import './_size_m/room-form__caption_size_m.scss';
+@import './_size_s/room-form__caption_size_s.scss';

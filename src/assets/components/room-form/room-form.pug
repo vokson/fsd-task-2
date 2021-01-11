@@ -1,0 +1,17 @@
+//- size: (s|m)
+//- action
+mixin room-form(parameters)
+    form(
+        action=parameters.action
+        method='post'
+        class='room-form'
+        class='room-form_size_' + parameters.size
+    )&attributes(attributes)
+
+        include ./__caption/room-form__caption.pug
+        include ./__guests/room-form__guests.pug
+        include ./__dates-container/room-form__dates-container.pug
+
+        +room-form__caption({'size': parameters.size})
+        +room-form__dates-container({'size': parameters.size})
+        +room-form__guests()

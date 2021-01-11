@@ -1,0 +1,5 @@
+//- theme(room|guest)
+mixin dropdown__form-data(parameters)
+    - const name = (parameters.theme == 'room') ? 'rooms' : 'guests'; 
+    input(class='dropdown__form-data' type='hidden' name=name)
+    

@@ -16,7 +16,9 @@ mixin dropdown(parameters)
         include ./__field/dropdown__field.pug
         include ./__label/dropdown__label.pug
         include ./__menu/dropdown__menu.pug
+        include ./__form-data/dropdown__form-data.pug
 
         +dropdown__label({'label': parameters.label})
         +dropdown__field({'text': 'Сколько гостей'})
+        +dropdown__form-data({'theme': parameters.theme})
         +dropdown__menu(parameters)

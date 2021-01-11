@@ -4,12 +4,15 @@
 //- currentDate: (string) - in format XX.XX.XXXX
 //- startDate: (string) - in format XX.XX.XXXX
 //- endDate: (string) - in format XX.XX.XXXX
+//- size: (s|m)
 mixin calendar(parameters)
     -
         let classes = ['calendar'];
         if (parameters.active) {
             classes.push('calendar_active')
         }
+
+        classes.push('calendar_size_' + parameters.size);
 
     div(
         class=classes
@@ -25,5 +28,5 @@ mixin calendar(parameters)
         include ./__header/calendar__header.pug
 
         +calendar__header({})
-        +calendar__body({})
+        +calendar__body({'size': parameters.size})
         +calendar__footer({})

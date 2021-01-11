@@ -14,9 +14,9 @@ const isProd = !isDev;
 
 const optimization = () => {
   const config = {
-    splitChunks: {
-      chunks: 'all',
-    },
+    // splitChunks: {
+    //   chunks: 'initial',
+    // },
   };
 
   if (isProd) {
@@ -83,7 +83,19 @@ const plugins = () => {
     
     new HTMLWebpackPlugin({
       template: './pages/color_type/color_type.pug',
+      // filename: './index.html',
       filename: './color_type.html',
+      chunks: ['color_type'],
+      minify: {
+        collapseWhitespace: isProd,
+      },
+    }),
+
+    new HTMLWebpackPlugin({
+      template: './pages/form_elements/form_elements.pug',
+      filename: './form_elements.html',
+      filename: './index.html',
+      chunks: ['form_elements'],
       minify: {
         collapseWhitespace: isProd,
       },
@@ -91,18 +103,12 @@ const plugins = () => {
 
     new HTMLWebpackPlugin({
       template: './pages/cards/cards.pug',
-      filename: './index.html',
+      filename: './cards.html',
+      // chunks: ['cards'],
+      // filename: './index.html',
       minify: {
             collapseWhitespace: isProd
           }
-    }),
-
-    new HTMLWebpackPlugin({
-      template: './pages/form_elements/form_elements.pug',
-      filename: './form_elements.html',
-      minify: {
-        collapseWhitespace: isProd,
-      },
     }),
 
     new CleanWebpackPlugin(),
@@ -131,7 +137,7 @@ module.exports = {
     color_type: ['./pages/color_type/color_type.scss'],
 
     form_elements: [
-      // '@babel/polyfill',
+      '@babel/polyfill',
       './pages/form_elements/form_elements.js',
       './pages/form_elements/form_elements.scss',
     ],

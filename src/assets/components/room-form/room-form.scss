@@ -1,0 +1,21 @@
+.room-form {
+    display: flex;
+    flex-direction: column;
+    
+    box-sizing: border-box;
+    min-width: 250px;
+    max-width: 380px;
+
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+@import './_size_m/room-form_size_m.scss';
+@import './_size_s/room-form_size_s.scss';
+@import './__caption/room-form__caption.scss';
+@import './__dates-container/room-form__dates-container.scss';

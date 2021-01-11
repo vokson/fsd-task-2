@@ -3,7 +3,8 @@
 
 @import '@components/logo/logo.scss';
 @import '@components/calendar/calendar.scss';
-@import '@components/buttonfield/buttonfield.scss';
+@import '@components/room-form/room-form.scss';
+// @import '@components/buttonfield/buttonfield.scss';
 
 body {
   background: #F4F4F6;
@@ -57,7 +58,6 @@ body {
   grid-row-end: 2;
 }
 
-.block-3__calendar {
-  width: 100%;
-
-}
+// .block-3__calendar {
+  // width: 100%;
+// }

@@ -29,7 +29,7 @@ html(lang='ru')
                 div(class='container__block-1 block-1')
                     +textfield({'label': 'TEXT FIELD', 'placeholder' : 'Email'})(class='block-1__textfield')
                     +textfield({'label': 'TEXT FIELD', 'value' : 'This is pretty awesome'})(class='block-1__focused-textfield')
-                    +buttonfield({'label': 'DROPDOWN', 'value' : 'Сколько гостей', 'icon': 'expand', 'disabled': true})(class='block-1__guest-buttonfield')
+                    +dropdown({'theme': 'guest', 'counts': [0,0,0], 'label': 'DROPDOWN', 'apply': true, 'clean': true})(class='block-1__guest-dropdown')
                     +textfield({'label': 'MASKED TEXT FIELD', 'date-mask' : true})(class='block-1__masked-textfield')
 
                     div(class='block-1__buttonfield-row')

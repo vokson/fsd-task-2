@@ -1,9 +1,8 @@
 //- label: text of label
 //- placeholder: placeholder
 //- value: text inside input
-//- Modificators:
 //- icon: (expand|arrow)
-//- bottom: (flat)
+//- Modificators:
 //- disabled
 
 mixin buttonfield(parameters)
@@ -12,22 +11,10 @@ mixin buttonfield(parameters)
         include ./__label/buttonfield__label.pug
         include ./__button/buttonfield__button.pug
 
-        -
-            let inputParams = {
-                'placeholder': parameters.placeholder,
-                'value': parameters.value,
-                'disabled': parameters.disabled,
-            }
-
-            let buttonParams = {
-                'icon': parameters.icon,
-            }
-
-            if (parameters.bottom == 'flat') {
-                inputParams['without-left-bottom-radius'] = true
-                buttonParams['without-right-bottom-radius'] = true
-            }
-
         +buttonfield__label({'label': parameters.label})
-        +buttonfield__input(inputParams)
-        +buttonfield__button(buttonParams)
+        +buttonfield__input({
+            'placeholder': parameters.placeholder,
+            'value': parameters.value,
+            'disabled': parameters.disabled
+        })
+        +buttonfield__button({'icon': parameters.icon})

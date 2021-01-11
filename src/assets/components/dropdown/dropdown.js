@@ -2,10 +2,16 @@ const buttons = document.getElementsByClassName('dropdown__icon');
 
 Array.from(buttons).forEach((e) => {
   e.onclick = () => {
-    let dropdown = e.parentElement.parentElement;
+    const dropdown = e.parentElement.parentElement;
     dropdown.classList.toggle('dropdown_expanded');
   };
 });
+
+const applyButton = document.getElementsByClassName('dropdown__apply-button')[0];
+applyButton.onclick = () => {
+  const dropdown = applyButton.parentElement.parentElement.parentElement;
+  dropdown.classList.toggle('dropdown_expanded');
+};
 
 const bed = (count) => {
   if (count == 1) {
@@ -59,6 +65,7 @@ const onValueChange = (itemValueElement) => {
   });
 
   let description = [];
+  let postObj = {};
 
   if (dropdown.classList.contains('dropdown_theme_room')) {
     const functions = [bedroom, bed, bathroom];
@@ -71,16 +78,31 @@ const onValueChange = (itemValueElement) => {
 
     description =
       description.length > 0 ? description.join(', ') : 'Сделайте выбор..';
+
+    postObj = {
+      'bedroom': values[0],
+      'bed': values[1],
+      'bathroom': values[2]
+    }
   }
 
   if (dropdown.classList.contains('dropdown_theme_guest')) {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const sum = values.reduce(reducer);
     description = sum > 0 ? sum + ' ' + guest(sum) : 'Сколько гостей';
+
+    postObj = {
+      'adult': values[0],
+      'child': values[1],
+      'baby': values[2]
+    }
   }
 
   const field = dropdown.getElementsByClassName('dropdown__field')[0];
   field.setAttribute('value', description);
+
+  const data = dropdown.getElementsByClassName('dropdown__form-data')[0];
+  data.setAttribute('value', JSON.stringify(postObj));
 };
 
 

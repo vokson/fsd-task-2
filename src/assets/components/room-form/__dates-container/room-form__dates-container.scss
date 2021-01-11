@@ -1,0 +1,8 @@
+.room-form__dates-container {
+    display: flex;
+}
+
+@import './_size_m/room-form__dates-container_size_m.scss';
+@import './_size_s/room-form__dates-container_size_s.scss';
+@import '../__checkin/room-form__checkin.scss';
+@import '../__checkout/room-form__checkout.scss';

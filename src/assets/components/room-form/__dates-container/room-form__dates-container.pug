@@ -1,0 +1,11 @@
+//- size: (s|m)
+mixin room-form__dates-container(parameters)
+    div(
+        class='room-form__dates-container'
+        class='room-form__dates-container_size_' + parameters.size
+    )
+        include ../__checkin/room-form__checkin.pug
+        include ../__checkout/room-form__checkout.pug
+
+        +room-form__checkin()
+        +room-form__checkout()
