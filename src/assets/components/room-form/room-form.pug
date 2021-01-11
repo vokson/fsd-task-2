@@ -11,7 +11,9 @@ mixin room-form(parameters)
         include ./__caption/room-form__caption.pug
         include ./__guests/room-form__guests.pug
         include ./__dates-container/room-form__dates-container.pug
+        include ./__calendar/room-form__calendar.pug
 
         +room-form__caption({'size': parameters.size})
         +room-form__dates-container({'size': parameters.size})
+        +room-form__calendar({'size': parameters.size})
         +room-form__guests()

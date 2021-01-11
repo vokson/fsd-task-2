@@ -1,12 +1,13 @@
 .room-form {
+    position: relative;
     display: flex;
     flex-direction: column;
     
     box-sizing: border-box;
-    min-width: 250px;
+    min-width: 280px;
     max-width: 380px;
 
-    padding-top: 40px;
+    padding-top: 39px;
     padding-bottom: 30px;
 
     background-color: white;
@@ -18,4 +19,6 @@
 @import './_size_m/room-form_size_m.scss';
 @import './_size_s/room-form_size_s.scss';
 @import './__caption/room-form__caption.scss';
+@import './__guests/room-form__guests.scss';
 @import './__dates-container/room-form__dates-container.scss';
+@import './__calendar/room-form__calendar.scss';

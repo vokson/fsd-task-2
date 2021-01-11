@@ -1,0 +1,9 @@
+.room-form__calendar {
+    position: absolute;
+    
+    z-index: 1;
+}
+
+@import '../../calendar/calendar.scss';
+@import './_size_s/room-form__calendar_size_s.scss';
+@import './_size_m/room-form__calendar_size_m.scss';

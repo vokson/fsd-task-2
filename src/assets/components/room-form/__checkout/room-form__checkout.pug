@@ -1,3 +1,12 @@
-mixin room-form__checkout
+//- size: (s|m)
+mixin room-form__checkout(parameters)
     include ../../buttonfield/buttonfield.pug
-    +buttonfield({'label': 'ВЫЕЗД', 'value' : 'ДД.ММ.ГГГГ', 'icon': 'expand'})(class='room-form__checkout')
+    +buttonfield({
+        'label': 'ВЫЕЗД',
+        'value' : 'ДД.ММ.ГГГГ',
+        'icon': 'expand',
+        'disabled': true
+    })(
+        class='room-form__checkout'
+        class='room-form__checkout_size_' + parameters.size
+    )

@@ -7,5 +7,5 @@ mixin room-form__dates-container(parameters)
         include ../__checkin/room-form__checkin.pug
         include ../__checkout/room-form__checkout.pug
 
-        +room-form__checkin()
-        +room-form__checkout()
+        +room-form__checkin({'size': parameters.size})
+        +room-form__checkout({'size': parameters.size})

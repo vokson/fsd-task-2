@@ -94,7 +94,7 @@ const plugins = () => {
     new HTMLWebpackPlugin({
       template: './pages/form_elements/form_elements.pug',
       filename: './form_elements.html',
-      filename: './index.html',
+      // filename: './index.html',
       chunks: ['form_elements'],
       minify: {
         collapseWhitespace: isProd,
@@ -103,9 +103,9 @@ const plugins = () => {
 
     new HTMLWebpackPlugin({
       template: './pages/cards/cards.pug',
-      filename: './cards.html',
-      // chunks: ['cards'],
-      // filename: './index.html',
+      // filename: './cards.html',
+      chunks: ['cards'],
+      filename: './index.html',
       minify: {
             collapseWhitespace: isProd
           }

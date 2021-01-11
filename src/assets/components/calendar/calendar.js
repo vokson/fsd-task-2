@@ -1,7 +1,7 @@
 import './__button-apply/calendar__button-apply.js';
 import './__button-clean/calendar__button-clean.js';
 
-export default function (calendarNode, buttonfieldNodes, options) {
+export default function (calendarNode, inputNodes, options) {
   const getMonth = () => {
     return parseInt(calendarNode.getAttribute('month'));
   };
@@ -25,6 +25,49 @@ export default function (calendarNode, buttonfieldNodes, options) {
         parseInt(dateString.substring(5, 7)) - 1,
         parseInt(dateString.substring(8))
       )
+    );
+  };
+
+  const formatDate = (dateString) => {
+    if (dateString === '') {
+      return 'ДД.ММ.ГГГГ';
+    }
+    return (
+      dateString.substring(8) +
+      '.' +
+      dateString.substring(5, 7) +
+      '.' +
+      dateString.substring(0, 4)
+    );
+  };
+
+  const formatTwoDates = (dateString1, dateString2) => {
+    const monthes = [
+      'янв',
+      'фев',
+      'мар',
+      'апр',
+      'мая',
+      'июн',
+      'июл',
+      'авг',
+      'сен',
+      'окт',
+      'ноя',
+      'дек'
+    ];
+
+    const date1 = parseDate(dateString1);
+    const date2 = parseDate(dateString2);
+
+    return (
+      date1.getDate() +
+      ' ' +
+      monthes[date1.getMonth()] +
+      ' - ' +
+      date2.getDate() +
+      ' ' +
+      monthes[date2.getMonth()]
     );
   };
 
@@ -179,6 +222,29 @@ export default function (calendarNode, buttonfieldNodes, options) {
     setDateAttributes(dayNodes, calendarDay);
   };
 
+  const renderInputs = () => {
+    if (inputNodes.length == 1) {
+      inputNodes[0].setAttribute(
+        'value',
+        formatTwoDates(
+          calendarNode.getAttribute('start-date'),
+          calendarNode.getAttribute('end-date')
+        )
+      );
+    }
+
+    if (inputNodes.length == 2) {
+      inputNodes[0].setAttribute(
+        'value',
+        formatDate(calendarNode.getAttribute('start-date'))
+      );
+      inputNodes[1].setAttribute(
+        'value',
+        formatDate(calendarNode.getAttribute('end-date'))
+      );
+    }
+  };
+
   const render = () => {
     const month = getMonth();
     const year = getYear();
@@ -197,6 +263,9 @@ export default function (calendarNode, buttonfieldNodes, options) {
   )[0];
   const cleanButton = calendarNode.getElementsByClassName(
     'calendar__button-clean'
+  )[0];
+  const applyButton = calendarNode.getElementsByClassName(
+    'calendar__button-apply'
   )[0];
   const dayNodes = calendarNode.getElementsByClassName('calendar__day');
 
@@ -217,14 +286,13 @@ export default function (calendarNode, buttonfieldNodes, options) {
     calendarNode.setAttribute('start-date', '');
     calendarNode.setAttribute('end-date', '');
     render();
+    renderInputs();
   });
 
   // Кнопка Применить
-  // cleanButton.addEventListener('click', () => {
-  //   calendarNode.setAttribute('start-date', '');
-  //   calendarNode.setAttribute('end-date', '');
-  //   render();
-  // });
+  applyButton.addEventListener('click', () => {
+    renderInputs();
+  });
 
   // Нажатие на день
   Array.from(dayNodes).forEach((node) => {
