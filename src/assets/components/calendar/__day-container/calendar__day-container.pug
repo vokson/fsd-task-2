@@ -1,7 +1,6 @@
-//- size: (s|m)
 mixin calendar__day-container
     include ../__day/calendar__day.pug
     
     div(class='calendar__day-container')
         each idx in Array.from({length: 42}, (_, i) => i + 1)
-            +calendar__day({'day': idx, 'size': parameters.size})
+            +calendar__day({'day': idx})

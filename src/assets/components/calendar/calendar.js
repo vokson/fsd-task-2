@@ -292,6 +292,7 @@ export default function (calendarNode, inputNodes, options) {
   // Кнопка Применить
   applyButton.addEventListener('click', () => {
     renderInputs();
+    calendarNode.classList.toggle('calendar_active');
   });
 
   // Нажатие на день

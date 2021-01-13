@@ -1,9 +1,10 @@
-//- size: (s|m)
 //- action
+//- trigger_width
 mixin room-form(parameters)
     form(
         action=parameters.action
         method='post'
+        trigger=parameters.trigger_width
         class='room-form'
         class='room-form_size_' + parameters.size
     )&attributes(attributes)
@@ -13,7 +14,7 @@ mixin room-form(parameters)
         include ./__dates-container/room-form__dates-container.pug
         include ./__calendar/room-form__calendar.pug
 
-        +room-form__caption({'size': parameters.size})
-        +room-form__dates-container({'size': parameters.size})
-        +room-form__calendar({'size': parameters.size})
+        +room-form__caption()
+        +room-form__dates-container()
+        +room-form__calendar()
         +room-form__guests()

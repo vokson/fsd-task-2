@@ -1,7 +1,12 @@
 .room-form__checkout {
+  margin-left: 10px;
+}
 
+@media (max-width: $room-form-trigger-width) {
+  .room-form__checkout {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 @import '../../buttonfield/buttonfield.scss';
-@import './_size_m/room-form__checkout_size_m.scss';
-@import './_size_s/room-form__checkout_size_s.scss';

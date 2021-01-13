@@ -1,9 +1,13 @@
 .room-form__calendar {
     position: absolute;
-    
+    top: 190px;
     z-index: 1;
 }
 
+@media (max-width: $room-form-trigger-width) {
+    .room-form__calendar {
+        top: 263px;
+    }
+  }
+
 @import '../../calendar/calendar.scss';
-@import './_size_s/room-form__calendar_size_s.scss';
-@import './_size_m/room-form__calendar_size_m.scss';

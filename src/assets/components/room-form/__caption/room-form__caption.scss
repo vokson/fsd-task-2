@@ -1,8 +1,12 @@
 .room-form__caption {
-    @include bold-font-style;
-    margin-bottom: 22px;
-    width: 100%;
+  @include bold-font-style;
+  margin-bottom: 22px;
+  width: 100%;
+  font-size: 24px;
 }
 
-@import './_size_m/room-form__caption_size_m.scss';
-@import './_size_s/room-form__caption_size_s.scss';
+@media (max-width: $room-form-trigger-width) {
+  .room-form__caption {
+    font-size: 20px;
+  }
+}

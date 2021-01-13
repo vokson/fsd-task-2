@@ -1,8 +1,7 @@
-//- size: (s|m)
-mixin calendar__body(parameters)
+mixin calendar__body
     div(class='calendar__body')
         include ../__weekday-container/calendar__weekday-container.pug
         include ../__day-container/calendar__day-container.pug
         
         +calendar__weekday-container()
-        +calendar__day-container({'size': parameters.size})
+        +calendar__day-container()

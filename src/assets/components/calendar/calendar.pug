@@ -4,7 +4,6 @@
 //- currentDate: (string) - in format XX.XX.XXXX
 //- startDate: (string) - in format XX.XX.XXXX
 //- endDate: (string) - in format XX.XX.XXXX
-//- size: (s|m)
 mixin calendar(parameters)
     -
         let classes = ['calendar'];
@@ -21,12 +20,13 @@ mixin calendar(parameters)
         current-date=parameters.currentDate
         start-date=parameters.startDate
         end-date=parameters.endDate
+        trigger='400'
     )&attributes(attributes)
 
         include ./__body/calendar__body.pug
         include ./__footer/calendar__footer.pug
         include ./__header/calendar__header.pug
 
-        +calendar__header({})
-        +calendar__body({'size': parameters.size})
-        +calendar__footer({})
+        +calendar__header()
+        +calendar__body()
+        +calendar__footer()

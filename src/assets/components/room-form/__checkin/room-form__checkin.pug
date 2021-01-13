@@ -1,12 +1,8 @@
-//- size: (s|m)
-mixin room-form__checkin(parameters)
+mixin room-form__checkin
     include ../../buttonfield/buttonfield.pug
     +buttonfield({
         'label': 'ПРИБЫТИЕ',
         'value' : 'ДД.ММ.ГГГГ',
         'icon': 'expand',
         'disabled': true
-    })(
-        class='room-form__checkin'
-        class='room-form__checkin_size_' + parameters.size
-    )
+    })(class='room-form__checkin')

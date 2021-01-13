@@ -1,4 +1,3 @@
-//- size: (s|m)
 mixin room-form__calendar(parameters)
     include ../../calendar/calendar.pug
     - const date = new Date()
@@ -8,8 +7,4 @@ mixin room-form__calendar(parameters)
         'currentDate': date.toJSON().slice(0, 10),
         'startDate': '',
         'endDate': '',
-        'size': parameters.size
-    })(
-        class='room-form__calendar'
-        class='room-form__calendar_size_' + parameters.size
-    )
+    })(class='room-form__calendar')

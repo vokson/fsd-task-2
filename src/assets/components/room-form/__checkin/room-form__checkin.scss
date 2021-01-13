@@ -1,6 +1,12 @@
 .room-form__checkin {
+  margin-right: 10px;
+}
 
+@media (max-width: $room-form-trigger-width) {
+  .room-form__checkin  {
+    margin-right: 0;
+  }
+  
 }
 
 @import '../../buttonfield/buttonfield.scss';
-@import './_size_m/room-form__checkin_size_m.scss';
