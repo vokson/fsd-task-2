@@ -1,0 +1,6 @@
+mixin registration-form__gender
+    div(class='registration-form__gender')
+        include ../__male/registration-form__male.pug
+        include ../__female/registration-form__female.pug
+        +registration-form__male
+        +registration-form__female

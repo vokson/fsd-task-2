@@ -8,6 +8,7 @@ html(lang='ru')
         include ../../assets/components/logo/logo.pug
         include ../../assets/components/calendar/calendar.pug
         include ../../assets/components/room-form/room-form.pug
+        include ../../assets/components/registration-form/registration-form.pug
 
 
         +logo({'size': 'm'})(class='page__logo')
@@ -19,6 +20,11 @@ html(lang='ru')
                         'action': '/mock-address/change-me',
                         'trigger_width': 400
                     })(class='block-1__room-form')
+
+                    +registration-form({
+                        'action': '/mock-address/change-me',
+                        'trigger_width': 400
+                    })(class='block-1__registration-form')
 
                 div(class='container__block-2 block-2')
                 div(class='container__block-3 block-3')

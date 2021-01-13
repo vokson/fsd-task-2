@@ -1,0 +1,7 @@
+.registration-form__gender {
+    display: flex;
+    margin-top: 10px;
+}
+
+@import '../__male/registration-form__male.scss';
+@import '../__female/registration-form__female.scss';

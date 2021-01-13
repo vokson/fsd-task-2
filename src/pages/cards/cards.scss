@@ -1,4 +1,5 @@
 $room-form-trigger-width: 400px;
+$registration-form-trigger-width: 400px;
 $calendar-trigger-width: 400px;
 
 @import '@styles/zero-style.scss';
@@ -7,6 +8,7 @@ $calendar-trigger-width: 400px;
 @import '@components/logo/logo.scss';
 @import '@components/calendar/calendar.scss';
 @import '@components/room-form/room-form.scss';
+@import '@components/registration-form/registration-form.scss';
 
 body {
   background: #F4F4F6;
@@ -37,6 +39,10 @@ body {
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
+
+  .block-1__registration-form {
+    margin-top: 40px;
+  }
 
 }
 

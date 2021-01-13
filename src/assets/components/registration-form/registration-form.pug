@@ -1,0 +1,19 @@
+//- action
+mixin registration-form(parameters)
+    include ./__caption/registration-form__caption.pug
+    include ./__name/registration-form__name.pug
+    include ./__surname/registration-form__surname.pug
+    include ./__gender/registration-form__gender.pug
+    include ./__button/registration-form__button.pug
+
+    form(
+        action=parameters.action
+        method='post'
+        class='registration-form'
+    )&attributes(attributes)
+        +registration-form__caption()
+        +registration-form__name()
+        +registration-form__surname()
+        +registration-form__gender()
+        +registration-form__button()
+        

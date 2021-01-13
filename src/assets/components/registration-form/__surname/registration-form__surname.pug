@@ -1,0 +1,7 @@
+mixin registration-form__surname
+    include ../../input/input.pug
+    +input({
+        placeholder: 'Фамилия',
+        value: '',
+        name: 'surname'
+    })(class='registration-form__surname')

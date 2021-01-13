@@ -1,4 +1,5 @@
 import '@components/room-form/room-form.js';
+import '@components/registration-form/registration-form.js';
 import calendar from '@components/calendar/calendar.js';
 
 

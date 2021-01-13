@@ -1,0 +1,8 @@
+mixin registration-form__button
+    include ../../button/button.pug
+    +button({
+        'text': 'ПЕРЕЙТИ К ОПЛАТЕ',
+        'theme' : 'common-solid',
+        'icon': 'arrow',
+        'submit': true
+    })(class='registration-form__button' type='submit')

@@ -1,0 +1,12 @@
+.registration-form__caption {
+  @include bold-font-style;
+  margin-bottom: 22px;
+  width: 100%;
+  font-size: 24px;
+}
+
+@media (max-width: $room-form-trigger-width) {
+  .registration-form__caption {
+    font-size: 20px;
+  }
+}

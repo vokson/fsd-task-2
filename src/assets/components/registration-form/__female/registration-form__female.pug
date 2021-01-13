@@ -1,0 +1,7 @@
+mixin registration-form__female
+    include ../../radio/radio.pug
+    +radio({
+        'name': 'gender',
+        'value': 'female',
+        'description': 'Женщина'
+    })(class='registration-form__female')
