@@ -1,5 +1,6 @@
 //- placeholder: placeholder
 //- value: text inside input
+//- name: name for input
 
 //- Modificators:
 //- date-mask: input with date mask
@@ -13,6 +14,7 @@ mixin input(parameters)
             'type': 'text',
             'class': 'input',
             'placeholder': parameters.placeholder,
+            'name': parameters.name,
             'value': parameters.value
         }
 
@@ -28,7 +30,7 @@ mixin input(parameters)
 
         if (parameters.disabled) {
             inputAttributes.class += ' input_disabled';
-            inputAttributes.disabled = true
+            inputAttributes.readonly = true
         }
 
 

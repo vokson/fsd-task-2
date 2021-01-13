@@ -104,8 +104,8 @@ const plugins = () => {
     new HTMLWebpackPlugin({
       template: './pages/cards/cards.pug',
       // filename: './cards.html',
-      chunks: ['cards'],
       filename: './index.html',
+      chunks: ['cards'],
       minify: {
             collapseWhitespace: isProd
           }

@@ -1,20 +1,19 @@
 //- action
-//- trigger_width
 mixin room-form(parameters)
+    include ./__caption/room-form__caption.pug
+    include ./__guests/room-form__guests.pug
+    include ./__dates-container/room-form__dates-container.pug
+    include ./__calendar/room-form__calendar.pug
+    include ./__button/room-form__button.pug
+
     form(
         action=parameters.action
         method='post'
-        trigger=parameters.trigger_width
         class='room-form'
-        class='room-form_size_' + parameters.size
     )&attributes(attributes)
-
-        include ./__caption/room-form__caption.pug
-        include ./__guests/room-form__guests.pug
-        include ./__dates-container/room-form__dates-container.pug
-        include ./__calendar/room-form__calendar.pug
-
         +room-form__caption()
         +room-form__dates-container()
         +room-form__calendar()
         +room-form__guests()
+        +room-form__button()
+        

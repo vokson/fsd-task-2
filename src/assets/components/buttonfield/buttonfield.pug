@@ -2,6 +2,7 @@
 //- placeholder: placeholder
 //- value: text inside input
 //- icon: (expand|arrow)
+//- name: name for input
 //- Modificators:
 //- disabled
 
@@ -15,6 +16,7 @@ mixin buttonfield(parameters)
         +buttonfield__input({
             'placeholder': parameters.placeholder,
             'value': parameters.value,
-            'disabled': parameters.disabled
+            'disabled': parameters.disabled,
+            'name': parameters.name
         })
         +buttonfield__button({'icon': parameters.icon})

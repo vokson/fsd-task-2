@@ -1,5 +1,7 @@
 .room-form {
     position: relative;
+    z-index: 0;
+    
     display: flex;
     flex-direction: column;
     
@@ -28,3 +30,4 @@
 @import './__guests/room-form__guests.scss';
 @import './__dates-container/room-form__dates-container.scss';
 @import './__calendar/room-form__calendar.scss';
+@import './__button/room-form__button.scss';

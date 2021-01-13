@@ -77,6 +77,6 @@ mixin button(parameters)
 
     include ./__icon/button__icon.pug
 
-    div(type='button' class=classes)&attributes(attributes)= parameters.text
+    div(class=classes)&attributes(attributes)= parameters.text
         if icon
             +button__icon({'icon': icon})

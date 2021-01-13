@@ -1,0 +1,7 @@
+mixin room-form__button
+    include ../../button/button.pug
+    +button({
+        'text': 'ПОДОБРАТЬ НОМЕР',
+        'theme' : 'common-solid',
+        'icon': 'arrow'
+    })(class='room-form__button' type='submit')
