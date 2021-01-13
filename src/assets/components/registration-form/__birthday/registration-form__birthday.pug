@@ -1,0 +1,6 @@
+mixin registration-form__birthday
+    include ../../textfield/textfield.pug
+    +textfield({
+        'label': 'ДАТА РОЖДЕНИЯ',
+        'date-mask' : true
+    })(class='registration-form__birthday')

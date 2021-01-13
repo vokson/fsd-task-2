@@ -4,6 +4,7 @@ mixin registration-form(parameters)
     include ./__name/registration-form__name.pug
     include ./__surname/registration-form__surname.pug
     include ./__gender/registration-form__gender.pug
+    include ./__birthday/registration-form__birthday.pug
     include ./__button/registration-form__button.pug
 
     form(
@@ -15,5 +16,6 @@ mixin registration-form(parameters)
         +registration-form__name()
         +registration-form__surname()
         +registration-form__gender()
+        +registration-form__birthday()
         +registration-form__button()
         
