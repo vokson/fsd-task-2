@@ -4,8 +4,6 @@
 
 //- Modificators:
 //- date-mask: input with date mask
-//- right-border-free: input without right border
-//- without-left-bottom-radius: input without right border
 //- disabled
 mixin textfield(parameters)
     div(class='textfield')&attributes(attributes)
@@ -19,8 +17,6 @@ mixin textfield(parameters)
                 'value': parameters.value,
                 'disabled': parameters.disabled,
                 'date-mask': parameters['date-mask'],
-                'right-border-free': parameters['right-border-free'],
-                'without-left-bottom-radius': parameters['without-left-bottom-radius'],
             }
 
         include ./__input/textfield__input.pug
