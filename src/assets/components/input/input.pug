@@ -5,7 +5,6 @@
 //- Modificators:
 //- date-mask: input with date mask
 //- right-border-free: input without right border
-//- without-left-bottom-radius: input without right border
 //- disabled
 
 mixin input(parameters)
@@ -31,12 +30,6 @@ mixin input(parameters)
         if (parameters.disabled) {
             inputAttributes.class += ' input_disabled';
             inputAttributes.readonly = true
-        }
-
-
-
-         if (parameters['without-left-bottom-radius']) {
-            inputAttributes.class += ' input_without-left-bottom-radius';
         }
 
     input&attributes(inputAttributes)&attributes(attributes)
