@@ -3,6 +3,7 @@
 //- value: text inside input
 //- icon: (expand|arrow)
 //- name: name for input
+//- type: (password|email)
 //- Modificators:
 //- disabled
 
@@ -17,6 +18,7 @@ mixin buttonfield(parameters)
             'placeholder': parameters.placeholder,
             'value': parameters.value,
             'disabled': parameters.disabled,
-            'name': parameters.name
+            'name': parameters.name,
+            'type': parameters.type
         })
         +buttonfield__button({'icon': parameters.icon})

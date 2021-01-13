@@ -1,6 +1,7 @@
 //- placeholder: placeholder
 //- value: text inside input
 //- name: name for input
+//- type: (password|email)
 
 //- Modificators:
 //- date-mask: input with date mask
@@ -15,6 +16,16 @@ mixin input(parameters)
             'placeholder': parameters.placeholder,
             'name': parameters.name,
             'value': parameters.value
+        }
+
+        if (parameters.type) {
+            switch (parameters.type) {
+                case 'password':
+                    inputAttributes.type = 'password';
+                case 'email':
+                    inputAttributes.type = 'email';
+
+            }
         }
 
         if (parameters['date-mask']) {
