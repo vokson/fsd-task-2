@@ -1,0 +1,9 @@
+mixin registration-form__email
+    include ../../textfield/textfield.pug
+    +textfield({
+        label: 'ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС',
+        placeholder: 'Email',
+        value: '',
+        name: 'email',
+        type: 'email'
+    })(class='registration-form__email')

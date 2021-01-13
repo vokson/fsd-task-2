@@ -1,0 +1,12 @@
+.registration-form__login-text {
+  margin-right: auto;
+  @include normal-font-style;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media (max-width: $registration-form-trigger-width) {
+  .registration-form__login-text {
+    width: 130px;
+  }
+}

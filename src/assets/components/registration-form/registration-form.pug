@@ -1,14 +1,19 @@
-//- action
+//- registration_action
+//- login_action
 mixin registration-form(parameters)
     include ./__caption/registration-form__caption.pug
     include ./__name/registration-form__name.pug
     include ./__surname/registration-form__surname.pug
     include ./__gender/registration-form__gender.pug
     include ./__birthday/registration-form__birthday.pug
+    include ./__email/registration-form__email.pug
+    include ./__password/registration-form__password.pug
+    include ./__subscription/registration-form__subscription.pug
     include ./__button/registration-form__button.pug
+    include ./__login-container/registration-form__login-container.pug
 
     form(
-        action=parameters.action
+        action=parameters.registration_action
         method='post'
         class='registration-form'
     )&attributes(attributes)
@@ -17,5 +22,9 @@ mixin registration-form(parameters)
         +registration-form__surname()
         +registration-form__gender()
         +registration-form__birthday()
+        +registration-form__email()
+        +registration-form__password()
+        +registration-form__subscription()
         +registration-form__button()
+        +registration-form__login-container({'login_action': parameters.login_action})
         

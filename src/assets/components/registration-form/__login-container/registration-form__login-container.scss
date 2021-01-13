@@ -1,0 +1,8 @@
+.registration-form__login-container {
+    display: flex;
+    align-items: center;
+    margin-top: 29px;
+}
+
+@import '../__login-text/registration-form__login-text.scss';
+@import '../__login-button/registration-form__login-button.scss';

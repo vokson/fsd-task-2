@@ -1,6 +1,8 @@
 //- label: text of label
 //- placeholder: placeholder
 //- value: text inside input
+//- name: name for input
+//- type: (password|email)
 
 //- Modificators:
 //- date-mask: input with date mask
@@ -14,6 +16,8 @@ mixin textfield(parameters)
         -
             let inputParams = {
                 'placeholder': parameters.placeholder,
+                'type': parameters.type,
+                'name': parameters.name,
                 'value': parameters.value,
                 'disabled': parameters.disabled,
                 'date-mask': parameters['date-mask'],

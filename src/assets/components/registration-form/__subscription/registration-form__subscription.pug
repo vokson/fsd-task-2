@@ -1,0 +1,8 @@
+mixin registration-form__subscription
+    include ../../checkbox/checkbox.pug
+    +checkbox({
+        'name' : 'special_order',
+        'value' : 'on',
+        'description': 'Получать спецпредложения',
+        'toggle': true
+    })(class='registration-form__subscription')

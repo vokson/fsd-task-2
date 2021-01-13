@@ -1,0 +1,7 @@
+//- login_action
+mixin registration-form__login-container(parameters)
+    div(class='registration-form__login-container')
+        include ../__login-text/registration-form__login-text.pug
+        include ../__login-button/registration-form__login-button.pug
+        +registration-form__login-text
+        +registration-form__login-button({'login_action': parameters.login_action})

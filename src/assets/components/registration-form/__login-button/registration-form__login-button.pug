@@ -1,0 +1,8 @@
+//- login_action
+mixin registration-form__login-button(parameters)
+    include ../../button/button.pug
+    +button({
+        'text': 'ВОЙТИ',
+        'theme' : 'common-border',
+        'action': parameters.login_action
+    })(class='registration-form__login-button')

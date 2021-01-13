@@ -2,6 +2,7 @@
 //- theme: (common|common-border|common-solid|pagination-purple|pagination-green|pagination|like)
 //- icon: (arrow)
 //- submit: (true|false)
+//- action: url for href
 
 mixin button(parameters)
     -
@@ -86,7 +87,10 @@ mixin button(parameters)
         button(class=classes)&attributes(attributes)= parameters.text
             +icon
     else
-        div(class=classes)&attributes(attributes)= parameters.text
+        a(
+            class=classes
+            href=parameters.action
+        )&attributes(attributes)= parameters.text
             +icon
 
             

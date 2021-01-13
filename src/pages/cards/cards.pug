@@ -17,23 +17,24 @@ html(lang='ru')
             div(class='page__container container')
                 div(class='container__block-1 block-1')
                     +room-form({
-                        'action': '/mock-address/change-me',
-                        'trigger_width': 400
+                        action: '/mock-address/change-me',
+                        trigger_width: 400
                     })(class='block-1__room-form')
 
                     +registration-form({
-                        'action': '/mock-address/change-me',
-                        'trigger_width': 400
+                        registration_action: '/mock-address/change-me',
+                        login_action: '/mock-address/change-me',
+                        trigger_width: 400
                     })(class='block-1__registration-form')
 
                 div(class='container__block-2 block-2')
                 div(class='container__block-3 block-3')
                     
                     +calendar({
-                        'active': true,
-                        'year': 2019,
-                        'month': 8,
-                        'currentDate': '2019-08-08',
-                        'startDate': '2019-08-19',
-                        'endDate': '2019-08-23',
+                        active: true,
+                        year: 2019,
+                        month: 8,
+                        currentDate: '2019-08-08',
+                        startDate: '2019-08-19',
+                        endDate: '2019-08-23',
                     })(class='block-3__calendar')
