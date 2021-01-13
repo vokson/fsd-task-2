@@ -13,18 +13,12 @@ Array.from(roomForms).forEach((roomForm) => {
     const checkoutNodeInput = checkoutNode.getElementsByClassName('buttonfield__input')[0];
     const checkoutNodeButton = checkoutNode.getElementsByClassName('buttonfield__button')[0];
 
-    const submitButton = roomForm.getElementsByClassName('room-form__button')[0];
-
     checkinNodeButton.addEventListener('click', () => {
         calendarNode.classList.toggle('calendar_active');
     });
 
     checkoutNodeButton.addEventListener('click', () => {
         calendarNode.classList.toggle('calendar_active');
-    });
-
-    submitButton.addEventListener('click', () => {
-        roomForm.submit();
     });
 
     calendar(calendarNode, [checkinNodeInput, checkoutNodeInput], {});

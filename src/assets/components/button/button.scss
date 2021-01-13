@@ -3,10 +3,14 @@
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  position: relative;
 
+  position: relative;
   padding: 0;
+  
   user-select: none;
+  outline: none;
+  background: none;
+  border: none;
 
   border-radius: 1000px;
   cursor: pointer;
